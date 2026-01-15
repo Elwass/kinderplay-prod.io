@@ -80,8 +80,16 @@ const CTAPlusFooter = () => {
           <div className="cta-footer__column cta-footer__column--follow">
             <h3>Follow Us</h3>
             <div className="cta-footer__socials">
-              <span aria-hidden="true">f</span>
-              <span aria-hidden="true">◎</span>
+              <span className="cta-footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M18 8.5h-3V6.5c0-.8.6-1 1-1h2V2h-3c-2.8 0-4 1.7-4 4v2.5H8v3.5h3V22h4v-10h3l1-3.5z" />
+                </svg>
+              </span>
+              <span className="cta-footer__social-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false">
+                  <path d="M12 7.2a4.8 4.8 0 1 0 0 9.6 4.8 4.8 0 0 0 0-9.6zm0 7.9a3.1 3.1 0 1 1 0-6.2 3.1 3.1 0 0 1 0 6.2zm6.1-8.1a1.1 1.1 0 1 0 0 2.2 1.1 1.1 0 0 0 0-2.2zM20 5.3A4.3 4.3 0 0 0 15.7 1H8.3A4.3 4.3 0 0 0 4 5.3v7.4A4.3 4.3 0 0 0 8.3 17h7.4A4.3 4.3 0 0 0 20 12.7V5.3zm-1.8 7.4a2.5 2.5 0 0 1-2.5 2.5H8.3a2.5 2.5 0 0 1-2.5-2.5V5.3a2.5 2.5 0 0 1 2.5-2.5h7.4a2.5 2.5 0 0 1 2.5 2.5v7.4z" />
+                </svg>
+              </span>
             </div>
           </div>
         </div>
