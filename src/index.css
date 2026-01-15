@@ -293,6 +293,11 @@ html {
 }
 
 @media (max-width: 768px) {
+  .trial-decor,
+  .learning-env__decor,
+  .journey-section__decor {
+    display: none;
+  }
   .hero-section {
     min-height: 0 !important;
     height: auto;
@@ -336,26 +341,30 @@ html {
   }
 
   .hero-pill {
-    width: min(720px, 98vw);
+    width: min(560px, 92vw);
     max-width: none;
     height: auto;
-    min-height: 32px;
-    overflow: visible;
+    min-height: 34px;
+    overflow: hidden;
   }
 
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 6px;
     padding-inline: 0;
     padding-top: 0;
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 
   .hero-content {
     transform: none;
     padding-bottom: 6px;
-    margin-top: 10px;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
   }
 
   .hero-register-button {
@@ -368,35 +377,35 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin-bottom: -4px;
+    margin-bottom: -2px;
     margin-top: -18px;
     position: relative;
     top: -14px;
   }
 
   .hero-announcement {
-    width: min(680px, 98vw);
+    width: min(560px, 92vw);
     order: 2;
-    gap: 4px;
+    gap: 6px;
+    justify-content: center;
   }
 
   .hero-announcement button {
-    height: 8px;
-    width: 8px;
-    margin: 0;
+    display: none;
   }
 
   .hero-pill__content {
-    display: grid;
-    grid-template-columns: 12px 1fr 12px;
+    display: flex;
     align-items: center;
-    justify-items: center;
-    padding: 5px clamp(6px, 1.4vw, 8px);
+    justify-content: center;
+    padding: 6px clamp(8px, 2vw, 12px);
     gap: 6px;
   }
 
-  .hero-pill__content > svg {
-    justify-self: start;
+  .hero-pill__content::after {
+    content: "";
+    width: 11px;
+    height: 1px;
   }
 
   .hero-pill__text {
@@ -404,20 +413,35 @@ html {
   }
 
   .hero-pill__text {
-    font-size: 8.4px;
+    font-size: 10px;
     letter-spacing: 0;
-    white-space: nowrap;
-    overflow-wrap: normal;
+    white-space: normal;
+    overflow-wrap: anywhere;
     word-break: normal;
-    overflow: visible;
-    text-overflow: clip;
+    overflow: hidden;
+    text-overflow: unset;
     text-align: center;
-    line-height: 1.15;
+    line-height: 1.2;
   }
 
   .hero-pill__icon {
-    height: 11px;
-    width: 9px;
+    height: 12px;
+    width: 10px;
+  }
+
+  .hero-content > div:first-child,
+  .hero-description,
+  .hero-cta-buttons,
+  .hero-info {
+    margin-top: 0;
+  }
+
+  .hero-info {
+    margin-bottom: 0;
+  }
+
+  .hero-content h2 {
+    margin-top: 0;
   }
 
   .hero-description {
@@ -444,15 +468,15 @@ html {
   }
 
   .hero-cta-buttons {
-    margin-top: 14px;
+    margin-top: 0;
     flex-wrap: nowrap;
     gap: 8px;
     width: 100%;
   }
 
   .hero-info {
-    margin-top: 14px;
-    margin-bottom: 16px;
+    margin-top: 0;
+    margin-bottom: 0;
     flex-direction: row;
     flex-wrap: nowrap;
     gap: 12px;
@@ -496,6 +520,55 @@ html {
   .hero-register-button:active {
     transform: translateY(0);
     box-shadow: 0 6px 12px rgba(111, 95, 82, 0.12);
+  }
+
+  .learning-env__grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 16px;
+    padding: 0 16px 12px;
+    margin: 0 0 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .learning-env__grid::-webkit-scrollbar {
+    display: none;
+  }
+
+  .learning-env__card {
+    flex: 0 0 78%;
+    max-width: 78%;
+    scroll-snap-align: center;
+    border-radius: 24px;
+    box-shadow: 0 10px 24px rgba(52, 70, 90, 0.14);
+    outline: 1px solid rgba(216, 137, 87, 0.2);
+  }
+
+  .learning-env__card img {
+    height: 180px;
+  }
+
+  .learning-env__dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 12px;
+  }
+
+  .learning-env__dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    border: none;
+    background: rgba(216, 137, 87, 0.3);
+    cursor: pointer;
+  }
+
+  .learning-env__dot--active {
+    background: #d88957;
+    transform: scale(1.1);
   }
 
   .feature-strip__inner {
@@ -557,12 +630,12 @@ html {
   }
 
   .hero-topbar {
-    gap: 2px;
+    gap: 6px;
     justify-content: center;
   }
 
   .hero-announcement {
-    width: min(680px, 98vw);
+    width: min(560px, 92vw);
   }
 
   .hero-register-button {
@@ -573,23 +646,23 @@ html {
   }
 
   .hero-pill {
-    width: min(640px, 94vw);
+    width: min(560px, 92vw);
   }
 
   .hero-cta-buttons {
-    margin-top: 14px;
+    margin-top: 0;
     flex-wrap: nowrap;
     gap: 8px;
   }
 
   .hero-description {
-    margin-top: clamp(12px, 3vw, 20px);
+    margin-top: 0;
     gap: 10px;
     font-size: 14px;
   }
 
   .hero-content {
-    padding-top: 10px;
+    padding-top: 0;
   }
 }
 
@@ -1039,6 +1112,10 @@ html {
   font-size: 14px;
   line-height: 1.6;
   color: rgba(107, 90, 74, 0.85);
+}
+
+.learning-env__dots {
+  display: none;
 }
 
 .learning-env__button {
