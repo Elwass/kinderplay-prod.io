@@ -348,14 +348,15 @@ html {
     align-items: center;
     text-align: center;
     padding: 8px 6px;
+    gap: 4px;
     border-radius: 12px;
     background: #ffffff;
     box-shadow: 0 4px 10px rgba(111, 95, 82, 0.12);
   }
 
   .readiness-item h3 {
-    font-size: 12px;
-    line-height: 1.15;
+    font-size: 11px;
+    line-height: 1.1;
   }
 
   .readiness-item .h-12.w-12 {
