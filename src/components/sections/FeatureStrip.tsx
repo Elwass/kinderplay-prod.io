@@ -3,21 +3,21 @@ const features = [
     title: "Adaptation of Australia’s\nEYLF Curriculum",
     icon: (
       <svg
-        className="h-[32px] w-[32px]"
-        viewBox="0 0 32 32"
+        className="feature-icon"
+        viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <circle cx="16" cy="12" r="6" stroke="currentColor" strokeWidth="1.6" />
+        <circle cx="12" cy="8" r="4.5" stroke="currentColor" strokeWidth="1.6" />
         <path
-          d="M13 7V12H19"
+          d="M10 5.5V8H14"
           stroke="currentColor"
           strokeWidth="1.6"
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
-          d="M10.5 21L8 29L16 25L24 29L21.5 21"
+          d="M8.5 14.5L6.5 21L12 18.5L17.5 21L15.5 14.5"
           stroke="currentColor"
           strokeWidth="1.6"
           strokeLinecap="round"
@@ -30,7 +30,7 @@ const features = [
     title: "Safe Environment &\nTrained Teachers",
     icon: (
       <svg
-        className="h-[32px] w-[32px]"
+        className="feature-icon"
         viewBox="0 0 32 32"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const features = [
     title: "Integrated Preschool &\nDaycare",
     icon: (
       <svg
-        className="h-[32px] w-[32px]"
+        className="feature-icon"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -86,7 +86,7 @@ const features = [
     title: "Premium Experience – Smart\nPricing",
     icon: (
       <svg
-        className="h-[32px] w-[32px]"
+        className="feature-icon"
         viewBox="0 0 24 24"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -105,12 +105,12 @@ const features = [
 const FeatureStrip = () => {
   return (
     <section className="w-full bg-[#F6EFE7]">
-      <div className="mx-auto flex min-h-[120px] w-full max-w-[1480px] items-center px-[48px] py-[20px]">
-        <div className="grid w-full items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto flex min-h-[96px] w-full max-w-[1480px] items-center justify-center px-[48px] py-[12px]">
+        <div className="grid w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-center gap-[18px] text-[18px] leading-[24px]"
+              className="flex items-center justify-center gap-[18px] text-[18px] leading-[24px]"
             >
               <div className="text-[#6F5F52]">{feature.icon}</div>
               <p className="whitespace-pre-line font-medium">{feature.title}</p>
