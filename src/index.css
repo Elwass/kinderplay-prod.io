@@ -296,13 +296,13 @@ html {
   .hero-section {
     min-height: 0 !important;
     height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
   }
 
   .hero-section > img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    display: none;
   }
 
   .hero-section > .pointer-events-none {

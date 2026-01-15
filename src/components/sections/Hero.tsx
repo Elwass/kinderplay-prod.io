@@ -3,7 +3,10 @@ import logo from "../../assets/kinderra-logo.png";
 
 const Hero = () => {
   return (
-    <section className="hero-section relative w-screen min-h-[82vh] overflow-hidden">
+    <section
+      className="hero-section relative w-screen min-h-[82vh] overflow-hidden"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <img
         src={heroBg}
         alt="Kinderra Play background"
