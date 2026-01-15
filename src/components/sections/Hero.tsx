@@ -3,7 +3,10 @@ import logo from "../../assets/kinderra-logo.png";
 
 const Hero = () => {
   return (
-    <section className="hero-section relative w-screen min-h-[82vh] overflow-hidden">
+    <section
+      className="hero-section relative w-screen min-h-[82vh] overflow-hidden"
+      style={{ backgroundImage: `url(${heroBg})` }}
+    >
       <img
         src={heroBg}
         alt="Kinderra Play background"
@@ -64,8 +67,8 @@ const Hero = () => {
                 </svg>
                 <p className="hero-pill__text">
                   <span className="sm:hidden">
-                    JOIN TRIAL CLASS &amp; PLAYDATE{" "}
-                    <span className="font-semibold">JAN 17 &amp; 24!</span>
+                    JOIN TRIAL CLASS &amp; STORY BOOK •{" "}
+                    <span className="font-semibold">JAN 17 &amp; 24</span>
                   </span>
                   <span className="hidden sm:inline">
                     JOIN OUR TRIAL CLASS &amp; STORY BOOK PLAYDATE{" "}
