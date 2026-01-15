@@ -26,9 +26,9 @@ const Readiness = () => {
 
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAD6D2]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead1.png"
+                  src={new URL("../../assets/IconRead1.png", import.meta.url).href}
                   alt="Emotional icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -42,9 +42,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D9F3E3]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead2.png"
+                  src={new URL("../../assets/IconRead2.png", import.meta.url).href}
                   alt="Life skill icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -58,9 +58,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D8E7FF]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead3.png"
+                  src={new URL("../../assets/IconRead3.png", import.meta.url).href}
                   alt="Social and communication icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -76,9 +76,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE9B9]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead4.png"
+                  src={new URL("../../assets/IconRead4.png", import.meta.url).href}
                   alt="Cognitive icon"
                   className="h-6 w-6 object-contain"
                 />
