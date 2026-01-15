@@ -457,7 +457,7 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin: 0 auto 2px;
+    margin: 0 auto 6px;
     position: static;
     transform: none;
   }
