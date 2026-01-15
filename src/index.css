@@ -608,13 +608,13 @@ html {
 
   .learning-env__grid {
     display: flex;
-    gap: 16px;
+    gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
-    scroll-padding: 20px;
-    padding: 0 20px 14px;
-    margin: 0 0 20px;
+    scroll-padding: 16px;
+    padding: 0 16px 12px;
+    margin: 0 0 16px;
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     overscroll-behavior-x: contain;
@@ -628,9 +628,17 @@ html {
     overflow-x: hidden;
   }
 
+  .learning-env__title {
+    margin-bottom: 12px;
+  }
+
+  .learning-env__subtitle {
+    margin-bottom: 20px;
+  }
+
   .learning-env__card {
-    flex: 0 0 66%;
-    max-width: 66%;
+    flex: 0 0 42%;
+    max-width: 42%;
     scroll-snap-align: center;
     border-radius: 28px;
     box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
@@ -639,7 +647,7 @@ html {
   }
 
   .learning-env__card img {
-    height: 170px;
+    height: 160px;
   }
 
   .learning-env__dots {
