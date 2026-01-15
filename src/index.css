@@ -59,8 +59,8 @@ html {
 }
 
 .hero-logo {
-  height: clamp(100px, 10vw, 150px);
-  width: clamp(100px, 10vw, 150px);
+  height: clamp(130px, 13vw, 195px);
+  width: clamp(130px, 13vw, 195px);
   object-fit: contain;
   flex: 0 0 auto;
 }
@@ -69,7 +69,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.6vw, 16px);
+  gap: clamp(10px, 1.2vw, 16px);
   width: 100%;
   min-width: 0;
 }
@@ -89,8 +89,10 @@ html {
 .hero-pill__content {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 12px;
-  padding: 0 clamp(18px, 2vw, 26px) 0 clamp(48px, 6vw, 64px);
+  padding: 0 clamp(18px, 2vw, 26px);
+  height: 100%;
   min-width: 0;
 }
 
@@ -126,7 +128,7 @@ html {
 }
 
 .hero-cta-buttons {
-  margin-top: clamp(24px, 4.5vw, 64px);
+  margin-top: clamp(18px, 3.5vw, 48px);
   display: flex;
   flex-wrap: wrap;
   align-items: center;
