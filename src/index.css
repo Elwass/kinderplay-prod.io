@@ -1324,7 +1324,8 @@ html {
   .learning-env__grid {
     display: block;
     width: 100vw;
-    margin-inline: calc(50% - 50vw);
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
     margin-bottom: 28px;
     overflow: hidden;
     padding: 0;
@@ -1335,8 +1336,10 @@ html {
     display: flex;
     flex-wrap: nowrap;
     gap: 20px;
-    animation: learningEnvMarquee 16s linear infinite;
+    width: max-content;
+    animation: learningEnvMarquee 12s linear infinite;
     animation-timing-function: linear;
+    animation-iteration-count: infinite;
     will-change: transform;
     background: transparent;
   }
