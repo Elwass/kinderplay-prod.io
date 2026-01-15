@@ -5,7 +5,7 @@ import starRight from "../../assets/vector (1).png";
 
 const LearningFramework = () => {
   return (
-    <section className="relative w-full overflow-hidden bg-[#F6EFE7] section-padding">
+    <section className="section-padding section-gradient section-animate relative w-full overflow-hidden bg-[#F6EFE7]">
       <img
         src={starLeft}
         alt=""
@@ -19,7 +19,7 @@ const LearningFramework = () => {
         className="pointer-events-none absolute right-[96px] top-[260px] hidden h-[120px] w-[120px] lg:block"
       />
 
-      <div className="section-container flex w-full flex-col gap-10 lg:gap-12">
+      <div className="section-container relative z-10 flex w-full flex-col gap-10 lg:gap-12">
         <div className="text-center text-[#6F5F52]">
           <h2 className="text-[clamp(34px,3.4vw,52px)] font-semibold leading-[1.2]">
             The <span className="text-[#D98956]">Kinderra</span> Learning Framework
@@ -32,14 +32,14 @@ const LearningFramework = () => {
 
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:items-center lg:gap-12">
           <div className="flex flex-col gap-6 lg:gap-8">
-            <div className="h-[clamp(230px,23vw,300px)] w-full overflow-hidden rounded-[32px]">
+            <div className="h-[clamp(210px,22vw,280px)] w-full overflow-hidden rounded-[32px]">
               <img
                 src={rectTop}
                 alt="Children learning together"
                 className="h-full w-full object-cover"
               />
             </div>
-            <div className="h-[clamp(230px,23vw,300px)] w-full overflow-hidden rounded-[32px]">
+            <div className="h-[clamp(210px,22vw,280px)] w-full overflow-hidden rounded-[32px]">
               <img
                 src={rectBottom}
                 alt="Children in classroom"
@@ -49,10 +49,10 @@ const LearningFramework = () => {
           </div>
 
           <div className="max-w-[520px] text-[#6F5F52]">
-            <p className="text-[20px] font-semibold leading-[28px]">
+            <p className="text-[20px] font-medium leading-[30px]">
               At Kinderra Play, learning through play is never random.
             </p>
-            <p className="mt-[22px] text-[16px] leading-[28px]">
+            <p className="mt-[22px] text-[16px] leading-[30px]">
               Our Play to Readiness Pathway is designed to ensure children enjoy learning
               while steadily developing the skills they need for both school readiness and
               life readiness.
@@ -60,7 +60,7 @@ const LearningFramework = () => {
             <h3 className="mt-[28px] text-[18px] font-semibold leading-[26px]">
               What Children Build at Kinderra :
             </h3>
-            <ul className="mt-[18px] list-disc space-y-[14px] pl-[18px] text-[16px] leading-[28px]">
+            <ul className="mt-[18px] list-disc space-y-[14px] pl-[18px] text-[16px] leading-[30px]">
               <li>
                 <span className="font-semibold">Independence</span> – managing routines,
                 self-care, and dailychoices
@@ -74,7 +74,7 @@ const LearningFramework = () => {
                 development in Englishand Bahasa Indonesia
               </li>
             </ul>
-            <p className="mt-[24px] text-[16px] leading-[28px]">
+            <p className="mt-[24px] text-[16px] leading-[30px]">
               Each activity is guided by trained educators with clear goals, milestones ,
               and outcomes.
             </p>

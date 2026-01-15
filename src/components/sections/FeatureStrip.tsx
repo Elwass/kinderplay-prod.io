@@ -104,8 +104,8 @@ const features = [
 
 const FeatureStrip = () => {
   return (
-    <section className="w-full bg-[#F6EFE7]">
-      <div className="mx-auto flex min-h-[96px] w-full max-w-[1480px] items-center justify-center px-[48px] py-[12px]">
+    <section className="feature-strip w-full">
+      <div className="feature-strip__inner mx-auto flex w-full max-w-[1480px] items-center justify-center px-[48px]">
         <div className="grid w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div
