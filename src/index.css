@@ -169,6 +169,13 @@ html {
   box-shadow: 0 0 8px 1px rgba(217, 137, 86, 0.2);
 }
 
+.feature-icon {
+  width: 28px;
+  height: 28px;
+  display: block;
+  flex: 0 0 auto;
+}
+
 @media (max-width: 1024px) {
   .section-padding {
     padding-block: var(--section-py-tablet);
