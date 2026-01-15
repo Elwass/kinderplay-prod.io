@@ -26,8 +26,8 @@ const Readiness = () => {
             />
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2">
-            <div className="flex flex-col gap-3 text-[#6F5F52]">
+          <div className="readiness-items grid gap-6 sm:grid-cols-2" data-reveal-stagger>
+            <div className="readiness-item flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
                   src={new URL("../../assets/IconRead1.png", import.meta.url).href}
@@ -36,14 +36,14 @@ const Readiness = () => {
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Emotional</h3>
-              <ul className="list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
+              <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Anak merasa aman dan percaya diri</li>
                 <li>Mampu mengenali dan mengekspresikan emosi</li>
                 <li>Tidak mudah overwhelmed</li>
               </ul>
             </div>
 
-            <div className="flex flex-col gap-3 text-[#6F5F52]">
+            <div className="readiness-item flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
                   src={new URL("../../assets/IconRead2.png", import.meta.url).href}
@@ -52,14 +52,14 @@ const Readiness = () => {
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Life Skill</h3>
-              <ul className="list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
+              <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Mengikuti rutinitas harian</li>
                 <li>Makan, merapikan, mandiri</li>
                 <li>Main/beraktivitas sendiri (sesuai usia)</li>
               </ul>
             </div>
 
-            <div className="flex flex-col gap-3 text-[#6F5F52]">
+            <div className="readiness-item flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
                   src={new URL("../../assets/IconRead3.png", import.meta.url).href}
@@ -70,14 +70,14 @@ const Readiness = () => {
               <h3 className="text-[18px] font-semibold leading-[24px]">
                 Social &amp; Communication
               </h3>
-              <ul className="list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
+              <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Berinteraksi dengan teman dan guru</li>
                 <li>Mendengarkan, bergiliran, menyampaikan kebutuhan</li>
                 <li>Penggunaan bilingual (EN-ID)</li>
               </ul>
             </div>
 
-            <div className="flex flex-col gap-3 text-[#6F5F52]">
+            <div className="readiness-item flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
                   src={new URL("../../assets/IconRead4.png", import.meta.url).href}
@@ -86,7 +86,7 @@ const Readiness = () => {
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Cognitive</h3>
-              <ul className="list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
+              <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Rasa ingin tahu dan berpikir kritis</li>
                 <li>Memecahkan masalah sederhana</li>
                 <li>Eksplorasi dan kreativitas</li>

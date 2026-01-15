@@ -49,16 +49,49 @@ const FeatureStrip = () => {
   return (
     <section className="feature-strip w-full">
       <div className="feature-strip__inner mx-auto flex w-full max-w-[1480px] items-center justify-center px-[48px]">
-        <div className="grid w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid-cols-2 lg:grid-cols-4">
+        <div
+          className="feature-strip__grid hidden w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid md:grid-cols-2 lg:grid-cols-4"
+          data-reveal-stagger
+        >
           {features.map((feature) => (
             <div
               key={feature.title}
-              className="flex items-center justify-center gap-[18px] text-[18px] leading-[24px]"
+              className="feature-strip__item flex items-center justify-center gap-[18px] text-[18px] leading-[24px]"
             >
               <div className="text-[#6F5F52]">{feature.icon}</div>
-              <p className="whitespace-pre-line font-medium">{feature.title}</p>
+              <p className="feature-strip__text whitespace-pre-line font-medium">
+                {feature.title}
+              </p>
             </div>
           ))}
+        </div>
+        <div className="feature-strip__marquee flex w-full md:hidden" data-reveal-stagger>
+          <div className="feature-strip__track" data-reveal-stagger>
+            {features.map((feature) => (
+              <div
+                key={`${feature.title}-primary`}
+                className="feature-strip__item flex items-center justify-center gap-[18px] text-[18px] leading-[24px]"
+              >
+                <div className="text-[#6F5F52]">{feature.icon}</div>
+                <p className="feature-strip__text whitespace-pre-line font-medium">
+                  {feature.title}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="feature-strip__track" aria-hidden="true" data-reveal-stagger>
+            {features.map((feature) => (
+              <div
+                key={`${feature.title}-secondary`}
+                className="feature-strip__item flex items-center justify-center gap-[18px] text-[18px] leading-[24px]"
+              >
+                <div className="text-[#6F5F52]">{feature.icon}</div>
+                <p className="feature-strip__text whitespace-pre-line font-medium">
+                  {feature.title}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
