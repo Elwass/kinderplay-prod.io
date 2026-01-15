@@ -66,14 +66,8 @@ const Hero = () => {
                   />
                 </svg>
                 <p className="hero-pill__text">
-                  <span className="sm:hidden">
-                    JOIN TRIAL CLASS &amp; STORY BOOK •{" "}
-                    <span className="font-semibold">JAN 17 &amp; 24</span>
-                  </span>
-                  <span className="inline">
-                    JOIN OUR TRIAL CLASS &amp; STORY BOOK PLAYDATE{" "}
-                    <span className="font-semibold">ON JANUARY 17 &amp; 24!</span>
-                  </span>
+                  JOIN OUR TRIAL CLASS &amp; STORY BOOK PLAYDATE{" "}
+                  <span className="font-semibold">ON JANUARY 17 &amp; 24!</span>
                 </p>
               </div>
             </div>

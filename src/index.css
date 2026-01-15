@@ -336,10 +336,10 @@ html {
   }
 
   .hero-pill {
-    width: min(600px, 92vw);
+    width: min(720px, 98vw);
     max-width: none;
     height: auto;
-    min-height: 36px;
+    min-height: 32px;
     overflow: visible;
   }
 
@@ -349,13 +349,13 @@ html {
     gap: 2px;
     padding-inline: 0;
     padding-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 14px;
   }
 
   .hero-content {
     transform: none;
     padding-bottom: 6px;
-    margin-top: 6px;
+    margin-top: 14px;
   }
 
   .hero-register-button {
@@ -368,10 +368,10 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin-bottom: -8px;
-    margin-top: -16px;
+    margin-bottom: -6px;
+    margin-top: -18px;
     position: relative;
-    top: -12px;
+    top: -14px;
   }
 
   .hero-announcement {
@@ -386,23 +386,25 @@ html {
   }
 
   .hero-pill__content {
-    padding: 6px clamp(6px, 2vw, 10px);
-    gap: 5px;
+    padding: 5px clamp(6px, 1.6vw, 8px);
+    gap: 4px;
   }
 
   .hero-pill__text {
-    font-size: 9px;
+    font-size: 8.4px;
     letter-spacing: 0;
     white-space: nowrap;
+    overflow-wrap: normal;
+    word-break: normal;
     overflow: visible;
     text-overflow: clip;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
   .hero-pill__icon {
-    height: 12px;
-    width: 10px;
+    height: 11px;
+    width: 9px;
   }
 
   .hero-description {
