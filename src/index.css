@@ -49,13 +49,14 @@ html {
 
 .hero-topbar {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   justify-content: center;
   gap: clamp(16px, 2.4vw, 28px);
   max-width: 1200px;
   margin: 0 auto;
   padding-inline: 24px;
+  padding-block: clamp(4px, 0.8vw, 8px);
   width: 100%;
 }
 
@@ -64,6 +65,7 @@ html {
   width: clamp(150px, 15vw, 220px);
   object-fit: contain;
   flex: 0 0 auto;
+  justify-self: start;
 }
 
 .hero-announcement {
@@ -75,6 +77,7 @@ html {
   max-width: min(760px, 58vw);
   min-width: 0;
   margin: 0 auto;
+  justify-self: center;
 }
 
 .hero-pill {
@@ -127,6 +130,7 @@ html {
   background: transparent;
   flex: 0 0 auto;
   font-size: clamp(12px, 1vw, 14px);
+  justify-self: end;
 }
 
 .hero-cta-buttons {
