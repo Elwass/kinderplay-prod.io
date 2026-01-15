@@ -1,6 +1,6 @@
 import rectTop from "../../assets/Rectangle 29.png";
 import rectBottom from "../../assets/Rectangle 30.png";
-import starLeft from "../../assets/vector.png";
+import starLeft from "../../assets/Vector.png";
 import starRight from "../../assets/vector (1).png";
 
 const LearningFramework = () => {
