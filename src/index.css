@@ -433,7 +433,7 @@ html {
     padding-inline: 0;
     padding-top: 0;
     padding-bottom: 2px;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
     align-items: center;
   }
 
@@ -457,7 +457,7 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin: 0 auto 6px;
+    margin: 0 auto 4px;
     position: static;
     transform: none;
   }
