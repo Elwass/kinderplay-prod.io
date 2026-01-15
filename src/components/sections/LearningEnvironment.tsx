@@ -15,53 +15,6 @@ const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 export default function LearningEnvironment() {
   const loopImages = useMemo(() => [...images, ...images], []);
 
-  const handleNext = () => {
-    scrollToIndex(activeIndex + 1);
-    schedulePause();
-  };
-
-  useEffect(() => {
-    if (typeof window === "undefined") return;
-    const mediaQuery = window.matchMedia("(max-width: 768px)");
-    const updateMatch = () => setIsMobile(mediaQuery.matches);
-    updateMatch();
-    if (mediaQuery.addEventListener) {
-      mediaQuery.addEventListener("change", updateMatch);
-      return () => mediaQuery.removeEventListener("change", updateMatch);
-    }
-    mediaQuery.addListener(updateMatch);
-    return () => mediaQuery.removeListener(updateMatch);
-  }, []);
-
-  useEffect(() => {
-    if (intervalRef.current) {
-      window.clearInterval(intervalRef.current);
-      intervalRef.current = null;
-    }
-
-    if (!isPaused && isMobile) {
-      intervalRef.current = window.setInterval(() => {
-        setActiveIndex((prev) => (prev + 1) % images.length);
-      }, autoSlideIntervalMs);
-    }
-
-    return () => {
-      if (intervalRef.current) {
-        window.clearInterval(intervalRef.current);
-        intervalRef.current = null;
-      }
-    };
-  }, [isMobile, isPaused]);
-
-  useEffect(() => {
-    return () => {
-      if (pauseTimeoutRef.current) {
-        window.clearTimeout(pauseTimeoutRef.current);
-        pauseTimeoutRef.current = null;
-      }
-    };
-  }, []);
-
   return (
     <section className="learning-env section-padding">
       <img
