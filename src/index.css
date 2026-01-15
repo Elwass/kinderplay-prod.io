@@ -337,13 +337,14 @@ html {
 
   .hero-pill {
     max-width: min(560px, 96vw);
-    height: 36px;
+    height: auto;
+    min-height: 36px;
   }
 
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     padding-inline: 0;
     padding-top: 0;
     margin-bottom: 2px;
@@ -364,6 +365,8 @@ html {
     width: clamp(160px, 50vw, 210px);
     justify-self: center;
     order: 1;
+    display: block;
+    margin-bottom: -6px;
   }
 
   .hero-announcement {
@@ -372,12 +375,17 @@ html {
   }
 
   .hero-pill__content {
-    padding: 0 clamp(20px, 4vw, 28px);
+    padding: 6px clamp(14px, 4vw, 22px);
   }
 
   .hero-pill__text {
-    font-size: 11px;
-    letter-spacing: 0.2px;
+    font-size: 10.5px;
+    letter-spacing: 0;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+    text-align: center;
+    line-height: 1.25;
   }
 
   .hero-description {
