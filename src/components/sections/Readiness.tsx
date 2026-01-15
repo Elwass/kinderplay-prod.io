@@ -2,8 +2,10 @@ import readinessImg from "../../assets/Rectangle 41 (1).png";
 
 const Readiness = () => {
   return (
-    <section className="section-padding w-full bg-[#F6EFE7]">
-      <div className="section-container flex w-full flex-col gap-10 lg:gap-12">
+    <section className="section-padding section-gradient section-animate relative w-full overflow-hidden bg-[#F6EFE7]">
+      <div className="section-ornament section-ornament--top-right" aria-hidden="true" />
+      <div className="section-ornament section-ornament--bottom-left" aria-hidden="true" />
+      <div className="section-container relative z-10 flex w-full flex-col gap-10 lg:gap-12">
         <div className="text-center text-[#6F5F52]">
           <h2 className="text-[clamp(34px,3.2vw,48px)] font-semibold leading-[1.2]">
             Apa yang dimaksud dengan{" "}
@@ -16,7 +18,7 @@ const Readiness = () => {
         </div>
 
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:items-center lg:gap-12">
-          <div className="h-[clamp(260px,30vw,360px)] w-full overflow-hidden rounded-[32px] bg-white">
+          <div className="h-[clamp(220px,26vw,320px)] w-full overflow-hidden rounded-[32px] bg-white">
             <img
               src={readinessImg}
               alt="Children learning"
@@ -26,9 +28,9 @@ const Readiness = () => {
 
           <div className="grid gap-6 sm:grid-cols-2">
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FAD6D2]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead1.png"
+                  src={new URL("../../assets/IconRead1.png", import.meta.url).href}
                   alt="Emotional icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -42,9 +44,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D9F3E3]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead2.png"
+                  src={new URL("../../assets/IconRead2.png", import.meta.url).href}
                   alt="Life skill icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -58,9 +60,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#D8E7FF]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead3.png"
+                  src={new URL("../../assets/IconRead3.png", import.meta.url).href}
                   alt="Social and communication icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -76,9 +78,9 @@ const Readiness = () => {
             </div>
 
             <div className="flex flex-col gap-3 text-[#6F5F52]">
-              <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#FFE9B9]">
+              <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead4.png"
+                  src={new URL("../../assets/IconRead4.png", import.meta.url).href}
                   alt="Cognitive icon"
                   className="h-6 w-6 object-contain"
                 />
