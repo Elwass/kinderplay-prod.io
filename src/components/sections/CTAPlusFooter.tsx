@@ -1,4 +1,4 @@
-import decorLeft from "../../assets/vector.png";
+import decorLeft from "../../assets/Vector.png";
 import decorRight from "../../assets/vector (1).png";
 import decorAlt from "../../assets/Vector (2).png";
 import "./CTAPlusFooter.css";
