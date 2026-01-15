@@ -49,7 +49,10 @@ const FeatureStrip = () => {
   return (
     <section className="feature-strip w-full">
       <div className="feature-strip__inner mx-auto flex w-full max-w-[1480px] items-center justify-center px-[48px]">
-        <div className="feature-strip__grid hidden w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid md:grid-cols-2 lg:grid-cols-4">
+        <div
+          className="feature-strip__grid hidden w-full max-w-[1200px] items-center justify-items-center gap-x-[40px] gap-y-[24px] text-[#6F5F52] md:grid md:grid-cols-2 lg:grid-cols-4"
+          data-reveal-stagger
+        >
           {features.map((feature) => (
             <div
               key={feature.title}
@@ -62,8 +65,8 @@ const FeatureStrip = () => {
             </div>
           ))}
         </div>
-        <div className="feature-strip__marquee flex w-full md:hidden">
-          <div className="feature-strip__track">
+        <div className="feature-strip__marquee flex w-full md:hidden" data-reveal-stagger>
+          <div className="feature-strip__track" data-reveal-stagger>
             {features.map((feature) => (
               <div
                 key={`${feature.title}-primary`}
@@ -76,7 +79,7 @@ const FeatureStrip = () => {
               </div>
             ))}
           </div>
-          <div className="feature-strip__track" aria-hidden="true">
+          <div className="feature-strip__track" aria-hidden="true" data-reveal-stagger>
             {features.map((feature) => (
               <div
                 key={`${feature.title}-secondary`}

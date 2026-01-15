@@ -73,6 +73,7 @@ export default function LearningEnvironment() {
           className="learning-env__grid"
           ref={carouselRef}
           onScroll={handleScroll}
+          data-reveal-stagger
         >
           {images.map((src, index) => (
             <div className="learning-env__card" key={`${src}-${index}`}>

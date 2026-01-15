@@ -26,7 +26,7 @@ const Readiness = () => {
             />
           </div>
 
-          <div className="readiness-items grid gap-6 sm:grid-cols-2">
+          <div className="readiness-items grid gap-6 sm:grid-cols-2" data-reveal-stagger>
             <div className="readiness-item flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
