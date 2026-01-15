@@ -239,6 +239,20 @@ html {
   flex: 0 0 auto;
 }
 
+.feature-strip {
+  background: linear-gradient(
+    180deg,
+    rgba(248, 242, 234, 1) 0%,
+    rgba(246, 239, 231, 1) 50%,
+    rgba(248, 242, 234, 1) 100%
+  );
+}
+
+.feature-strip__inner {
+  min-height: clamp(64px, 9vw, 84px);
+  padding-block: clamp(8px, 1.6vw, 14px);
+}
+
 .program-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
