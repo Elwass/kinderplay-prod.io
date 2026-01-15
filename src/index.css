@@ -294,7 +294,7 @@ html {
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: auto;
+    min-height: auto !important;
   }
 
   .hero-section::after {
@@ -317,8 +317,8 @@ html {
   }
 
   .hero-section .relative.z-10 {
-    min-height: auto;
-    padding-top: 4px;
+    min-height: auto !important;
+    padding-top: 0;
     padding-bottom: 8px;
   }
 
@@ -332,7 +332,7 @@ html {
     flex-direction: column;
     gap: 8px;
     padding-inline: 0;
-    padding-top: 2px;
+    padding-top: 0;
     margin-bottom: 2px;
   }
 
