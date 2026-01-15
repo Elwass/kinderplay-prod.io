@@ -3,14 +3,14 @@ import logo from "../../assets/kinderra-logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-screen min-h-screen overflow-hidden">
+    <section className="relative w-screen min-h-[88vh] overflow-hidden">
       <img
         src={heroBg}
         alt="Kinderra Play background"
         className="absolute inset-0 h-full w-full object-cover object-center"
       />
       <div className="pointer-events-none absolute bottom-0 left-0 z-[1] h-[clamp(120px,12vw,200px)] w-full bg-gradient-to-b from-transparent to-[#F6EFE7]" />
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-[1480px] flex-col items-center px-6 pb-[clamp(32px,5vw,80px)] pt-[clamp(28px,4vw,56px)] lg:px-16 xl:px-10">
+      <div className="relative z-10 mx-auto flex min-h-[88vh] w-full max-w-[1480px] flex-col items-center px-6 pb-[clamp(24px,4vw,56px)] pt-[clamp(20px,3vw,44px)] lg:px-16 xl:px-10">
         <div className="hero-topbar">
           <img
             src={logo}
@@ -122,7 +122,7 @@ const Hero = () => {
         </div>
 
         <div className="relative -translate-y-10 lg:-translate-y-16 2xl:-translate-y-20">
-          <div className="mt-[clamp(36px,6vw,96px)] flex w-full flex-col items-center text-center">
+          <div className="mt-[clamp(24px,3vw,56px)] flex w-full flex-col items-center text-center">
             <h1 className="text-[clamp(32px,3.4vw,64px)] font-semibold leading-[1.1] text-[#6F5F52]">
               Early Learning Center
             </h1>
