@@ -336,7 +336,7 @@ html {
   }
 
   .hero-pill {
-    width: min(640px, 94vw);
+    width: min(600px, 92vw);
     max-width: none;
     height: auto;
     min-height: 36px;
@@ -349,13 +349,13 @@ html {
     gap: 2px;
     padding-inline: 0;
     padding-top: 0;
-    margin-bottom: 2px;
+    margin-bottom: 8px;
   }
 
   .hero-content {
     transform: none;
     padding-bottom: 6px;
-    margin-top: -4px;
+    margin-top: 6px;
   }
 
   .hero-register-button {
@@ -368,30 +368,30 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin-bottom: -10px;
-    margin-top: -12px;
+    margin-bottom: -8px;
+    margin-top: -16px;
     position: relative;
-    top: -8px;
+    top: -12px;
   }
 
   .hero-announcement {
     width: min(680px, 98vw);
     order: 2;
-    gap: 6px;
+    gap: 4px;
   }
 
   .hero-announcement button {
-    height: 9px;
-    width: 9px;
+    height: 8px;
+    width: 8px;
   }
 
   .hero-pill__content {
-    padding: 6px clamp(6px, 2.2vw, 12px);
-    gap: 6px;
+    padding: 6px clamp(6px, 2vw, 10px);
+    gap: 5px;
   }
 
   .hero-pill__text {
-    font-size: 9.2px;
+    font-size: 9px;
     letter-spacing: 0;
     white-space: nowrap;
     overflow: visible;
@@ -401,8 +401,8 @@ html {
   }
 
   .hero-pill__icon {
-    height: 14px;
-    width: 12px;
+    height: 12px;
+    width: 10px;
   }
 
   .hero-description {
@@ -484,22 +484,33 @@ html {
   }
 
   .feature-strip__inner {
-    padding-inline: 12px;
+    padding-inline: 8px;
   }
 
-  .feature-strip__grid {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 8px;
-    justify-content: space-between;
+  .feature-strip__marquee {
+    overflow: hidden;
+    width: 100%;
+  }
+
+  .feature-strip__track {
+    display: inline-flex;
     align-items: center;
+    gap: 14px;
+    width: max-content;
+    animation: featureStripMarquee 22s linear infinite;
+  }
+
+  .feature-strip__marquee:active .feature-strip__track,
+  .feature-strip__marquee:hover .feature-strip__track {
+    animation-play-state: paused;
   }
 
   .feature-strip__item {
     gap: 6px;
     font-size: 10px;
     line-height: 1.1;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
+    white-space: nowrap;
   }
 
   .feature-strip__text {
@@ -509,6 +520,15 @@ html {
   .feature-badge {
     width: 18px;
     height: 18px;
+  }
+}
+
+@keyframes featureStripMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
