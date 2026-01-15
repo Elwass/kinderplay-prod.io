@@ -15,7 +15,7 @@ export default function WhyChoose() {
               <span>Kinderra Play?</span>
             </h2>
 
-            <div className="why-grid">
+            <div className="why-grid" data-reveal-stagger>
               <div className="why-col">
                 <Feature
                   icon="icon80.png"
