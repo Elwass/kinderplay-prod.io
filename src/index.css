@@ -638,8 +638,8 @@ html {
   }
 
   .learning-env__card {
-    flex: 0 0 70%;
-    max-width: 70%;
+    flex: 0 0 58%;
+    max-width: 58%;
     scroll-snap-align: center;
     border-radius: 28px;
     box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
@@ -647,8 +647,12 @@ html {
     transition: box-shadow 0.3s ease, transform 0.3s ease;
   }
 
+  .learning-env__card:active {
+    transform: scale(0.98);
+  }
+
   .learning-env__card img {
-    height: 160px;
+    height: 140px;
     object-fit: cover;
   }
 
