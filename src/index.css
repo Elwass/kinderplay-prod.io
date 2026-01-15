@@ -429,9 +429,10 @@ html {
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 2px;
+    gap: 1px;
     padding-inline: 0;
     padding-top: 0;
+    padding-bottom: 2px;
     margin-bottom: 8px;
     align-items: center;
   }
@@ -456,7 +457,7 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 2px;
     position: static;
     transform: none;
   }
@@ -466,7 +467,8 @@ html {
     order: 2;
     gap: 4px;
     justify-content: center;
-    margin-top: 2px;
+    margin-top: 0;
+    padding-block: 2px;
   }
 
   .hero-announcement button {
