@@ -28,7 +28,7 @@ const Readiness = () => {
             <div className="flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead1.png"
+                  src={`${import.meta.env.BASE_URL}assets/IconRead1.png`}
                   alt="Emotional icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -44,7 +44,7 @@ const Readiness = () => {
             <div className="flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead2.png"
+                  src={`${import.meta.env.BASE_URL}assets/IconRead2.png`}
                   alt="Life skill icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -60,7 +60,7 @@ const Readiness = () => {
             <div className="flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead3.png"
+                  src={`${import.meta.env.BASE_URL}assets/IconRead3.png`}
                   alt="Social and communication icon"
                   className="h-6 w-6 object-contain"
                 />
@@ -78,7 +78,7 @@ const Readiness = () => {
             <div className="flex flex-col gap-3 text-[#6F5F52]">
               <div className="flex h-12 w-12 items-center justify-center">
                 <img
-                  src="/assets/IconRead4.png"
+                  src={`${import.meta.env.BASE_URL}assets/IconRead4.png`}
                   alt="Cognitive icon"
                   className="h-6 w-6 object-contain"
                 />
