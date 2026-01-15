@@ -613,16 +613,38 @@ html {
     overflow-x: hidden;
     padding: 0 0 12px;
     margin: 0 0 16px;
+    position: relative;
     touch-action: pan-y;
   }
 
   .learning-env__track {
     display: flex;
     flex-wrap: nowrap;
-    gap: 0;
-    transform: translateX(calc(var(--learning-env-index, 0) * -100%));
-    transition: transform 0.5s ease;
+    gap: 12px;
+    animation: learningEnvMarquee 24s linear infinite;
     will-change: transform;
+  }
+
+  .learning-env__grid:active .learning-env__track,
+  .learning-env__grid:focus-within .learning-env__track {
+    animation-play-state: paused;
+  }
+
+  .learning-env__grid::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 6px;
+    height: 24px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(193, 214, 230, 0.5) 100%
+    );
+    border-radius: 999px;
+    pointer-events: none;
+    opacity: 0.7;
   }
 
   .learning-env__grid::-webkit-scrollbar {
@@ -642,8 +664,8 @@ html {
   }
 
   .learning-env__card {
-    flex: 0 0 100%;
-    max-width: 100%;
+    flex: 0 0 70%;
+    max-width: 70%;
     scroll-snap-align: center;
     border-radius: 28px;
     box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
@@ -732,13 +754,22 @@ html {
 
 @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
   .learning-env__track {
-    transition: none;
+    animation: none;
   }
 
   .learning-env__card,
   .learning-env__dot,
   .learning-env__arrow {
     transition: none;
+  }
+}
+
+@keyframes learningEnvMarquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
