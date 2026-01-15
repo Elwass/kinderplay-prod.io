@@ -294,7 +294,19 @@ html {
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: auto;
+    min-height: 0 !important;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .hero-section > img {
+    display: none;
+  }
+
+  .hero-section > .pointer-events-none {
+    display: none;
   }
 
   .hero-section::after {
@@ -303,9 +315,9 @@ html {
     inset: 0;
     background: linear-gradient(
       180deg,
-      rgba(255, 248, 239, 0.9) 0%,
-      rgba(255, 248, 239, 0.55) 45%,
-      rgba(246, 239, 231, 0.9) 100%
+      rgba(255, 248, 239, 0.65) 0%,
+      rgba(255, 248, 239, 0.35) 45%,
+      rgba(246, 239, 231, 0.65) 100%
     );
     pointer-events: none;
     z-index: 1;
@@ -317,26 +329,33 @@ html {
   }
 
   .hero-section .relative.z-10 {
-    min-height: auto;
-    padding-top: 12px;
-    padding-bottom: 16px;
+    min-height: 0 !important;
+    height: auto;
+    padding-top: 0;
+    padding-bottom: 6px;
   }
 
   .hero-pill {
-    max-width: min(560px, 70vw);
+    width: min(680px, 96vw);
+    max-width: none;
+    height: auto;
+    min-height: 36px;
+    overflow: visible;
   }
 
   .hero-topbar {
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
     padding-inline: 0;
-    padding-top: 4px;
+    padding-top: 0;
     margin-bottom: 2px;
   }
 
   .hero-content {
     transform: none;
-    padding-bottom: 8px;
-    margin-top: 0;
+    padding-bottom: 6px;
+    margin-top: -4px;
   }
 
   .hero-register-button {
@@ -344,22 +363,54 @@ html {
   }
 
   .hero-logo {
-    height: clamp(110px, 34vw, 160px);
-    width: clamp(110px, 34vw, 160px);
+    height: clamp(160px, 50vw, 210px);
+    width: clamp(160px, 50vw, 210px);
     justify-self: center;
+    order: 1;
+    display: block;
+    margin-bottom: -10px;
+    margin-top: -6px;
+    position: relative;
+    top: -4px;
   }
 
   .hero-announcement {
-    width: min(520px, 90vw);
+    width: min(680px, 98vw);
+    order: 2;
+  }
+
+  .hero-announcement button {
+    height: 10px;
+    width: 10px;
+  }
+
+  .hero-pill__content {
+    padding: 6px clamp(8px, 2.5vw, 14px);
+    gap: 8px;
+  }
+
+  .hero-pill__text {
+    font-size: 9.6px;
+    letter-spacing: 0;
+    white-space: nowrap;
+    overflow: visible;
+    text-overflow: clip;
+    text-align: center;
+    line-height: 1.2;
   }
 
   .hero-description {
-    max-width: 520px;
-    line-height: 1.65;
+    max-width: 360px;
+    line-height: 1.6;
   }
 
   .hero-cta {
-    width: min(240px, 90vw);
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+    padding: 10px 12px;
+    font-size: 12px;
+    line-height: 1.25;
   }
 
   .hero-cta--primary {
@@ -371,10 +422,20 @@ html {
     color: #c77745;
   }
 
+  .hero-cta-buttons {
+    margin-top: 14px;
+    flex-wrap: nowrap;
+    gap: 8px;
+    width: 100%;
+  }
+
   .hero-info {
-    margin-top: 16px;
-    margin-bottom: 20px;
+    margin-top: 14px;
+    margin-bottom: 16px;
+    flex-direction: row;
+    flex-wrap: nowrap;
     gap: 12px;
+    white-space: nowrap;
   }
 
   .hero-info-item--program {
@@ -387,6 +448,26 @@ html {
 
   .hero-info-item--language {
     order: 3;
+  }
+
+  .hero-info-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-size: 13px;
+    line-height: 1.15;
+  }
+
+  .hero-info-item > div {
+    margin-top: 0;
+    font-size: 11px;
+    line-height: 1.15;
+  }
+
+  .hero-info-item + .hero-info-item {
+    padding-left: 12px;
+    border-left: 1px solid rgba(111, 95, 82, 0.6);
   }
 
   .hero-cta:active,
@@ -406,14 +487,11 @@ html {
   }
 
   .hero-topbar {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    gap: 10px;
     justify-content: center;
   }
 
   .hero-announcement {
-    order: 2;
     width: 100%;
   }
 
@@ -429,14 +507,15 @@ html {
   }
 
   .hero-cta-buttons {
-    margin-top: clamp(14px, 3vw, 24px);
-    gap: 10px;
+    margin-top: 14px;
+    flex-wrap: nowrap;
+    gap: 8px;
   }
 
   .hero-description {
     margin-top: clamp(12px, 3vw, 20px);
-    gap: 12px;
-    font-size: 15px;
+    gap: 10px;
+    font-size: 14px;
   }
 
   .hero-content {
