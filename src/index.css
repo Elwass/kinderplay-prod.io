@@ -610,6 +610,7 @@ html {
     display: flex;
     gap: 12px;
     overflow-x: auto;
+    flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
     scroll-padding: 16px;
@@ -637,8 +638,8 @@ html {
   }
 
   .learning-env__card {
-    flex: 0 0 42%;
-    max-width: 42%;
+    flex: 0 0 70%;
+    max-width: 70%;
     scroll-snap-align: center;
     border-radius: 28px;
     box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
@@ -648,6 +649,7 @@ html {
 
   .learning-env__card img {
     height: 160px;
+    object-fit: cover;
   }
 
   .learning-env__dots {
