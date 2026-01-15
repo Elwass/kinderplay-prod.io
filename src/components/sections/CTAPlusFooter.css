@@ -67,10 +67,13 @@
 }
 
 .cta-footer__decor {
-  position: absolute;
-  opacity: 0.22;
-  pointer-events: none;
-  z-index: 0;
+  display: none;
+}
+
+.cta-footer__cta::before,
+.cta-footer__cta::after {
+  content: none;
+  background: none;
 }
 
 .cta-footer__decor--left-top {
