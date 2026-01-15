@@ -318,19 +318,19 @@ html {
 
   .hero-section .relative.z-10 {
     min-height: auto;
-    padding-top: 8px;
-    padding-bottom: 12px;
+    padding-top: 4px;
+    padding-bottom: 8px;
   }
 
   .hero-pill {
-    max-width: min(520px, 84vw);
-    height: 34px;
+    max-width: min(560px, 96vw);
+    height: 36px;
   }
 
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
     padding-inline: 0;
     padding-top: 2px;
     margin-bottom: 2px;
@@ -338,8 +338,8 @@ html {
 
   .hero-content {
     transform: none;
-    padding-bottom: 8px;
-    margin-top: 0;
+    padding-bottom: 6px;
+    margin-top: -4px;
   }
 
   .hero-register-button {
@@ -347,15 +347,24 @@ html {
   }
 
   .hero-logo {
-    height: clamp(140px, 42vw, 190px);
-    width: clamp(140px, 42vw, 190px);
+    height: clamp(160px, 50vw, 210px);
+    width: clamp(160px, 50vw, 210px);
     justify-self: center;
     order: 1;
   }
 
   .hero-announcement {
-    width: min(520px, 92vw);
+    width: min(600px, 96vw);
     order: 2;
+  }
+
+  .hero-pill__content {
+    padding: 0 clamp(20px, 4vw, 28px);
+  }
+
+  .hero-pill__text {
+    font-size: 11px;
+    letter-spacing: 0.2px;
   }
 
   .hero-description {
@@ -393,7 +402,7 @@ html {
     margin-bottom: 16px;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 10px;
+    gap: 12px;
     white-space: nowrap;
   }
 
@@ -410,25 +419,23 @@ html {
   }
 
   .hero-info-item {
-    display: inline-flex;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
-    font-size: 12px;
-    line-height: 1.2;
+    gap: 4px;
+    font-size: 13px;
+    line-height: 1.15;
   }
 
   .hero-info-item > div {
     margin-top: 0;
-    font-size: inherit;
-    line-height: inherit;
+    font-size: 11px;
+    line-height: 1.15;
   }
 
-  .hero-info-item + .hero-info-item::before {
-    content: "";
-    display: inline-block;
-    height: 16px;
-    width: 1px;
-    background: rgba(111, 95, 82, 0.6);
+  .hero-info-item + .hero-info-item {
+    padding-left: 12px;
+    border-left: 1px solid rgba(111, 95, 82, 0.6);
   }
 
   .hero-cta:active,
