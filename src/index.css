@@ -298,6 +298,50 @@ html {
   .journey-section__decor {
     display: none;
   }
+
+  .readiness-items {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .readiness-items::-webkit-scrollbar {
+    display: none;
+  }
+
+  .readiness-item {
+    flex: 0 0 140px;
+    align-items: center;
+    text-align: center;
+    padding: 12px 10px;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 6px 16px rgba(111, 95, 82, 0.12);
+    scroll-snap-align: center;
+  }
+
+  .readiness-item h3 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .readiness-item .h-12.w-12 {
+    height: 36px;
+    width: 36px;
+  }
+
+  .readiness-item img {
+    height: 20px;
+    width: 20px;
+  }
+
+  .readiness-list {
+    display: none;
+  }
   .hero-section {
     min-height: 0 !important;
     height: auto;
