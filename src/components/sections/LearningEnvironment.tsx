@@ -40,7 +40,17 @@ export default function LearningEnvironment() {
     if (!node) return;
     const step = getStepSize();
     if (!step) return;
-    node.scrollTo({ left: step * index, behavior: "smooth" });
+    const clampedIndex = Math.min(Math.max(index, 0), images.length - 1);
+    node.scrollTo({ left: step * clampedIndex, behavior: "smooth" });
+    setActiveIndex(clampedIndex);
+  };
+
+  const handlePrev = () => {
+    scrollToIndex(activeIndex - 1);
+  };
+
+  const handleNext = () => {
+    scrollToIndex(activeIndex + 1);
   };
 
   return (
@@ -82,19 +92,37 @@ export default function LearningEnvironment() {
           ))}
         </div>
 
-        <div className="learning-env__dots" role="tablist" aria-label="Learning environment carousel">
-          {images.map((_, index) => (
-            <button
-              key={`learning-env-dot-${index}`}
-              type="button"
-              className={`learning-env__dot${
-                index === activeIndex ? " learning-env__dot--active" : ""
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-pressed={index === activeIndex}
-              onClick={() => scrollToIndex(index)}
-            />
-          ))}
+        <div className="learning-env__controls">
+          <button
+            type="button"
+            className="learning-env__arrow learning-env__arrow--prev"
+            onClick={handlePrev}
+            aria-label="Previous slide"
+          >
+            ←
+          </button>
+          <div className="learning-env__dots" role="tablist" aria-label="Learning environment carousel">
+            {images.map((_, index) => (
+              <button
+                key={`learning-env-dot-${index}`}
+                type="button"
+                className={`learning-env__dot${
+                  index === activeIndex ? " learning-env__dot--active" : ""
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+                aria-pressed={index === activeIndex}
+                onClick={() => scrollToIndex(index)}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="learning-env__arrow learning-env__arrow--next"
+            onClick={handleNext}
+            aria-label="Next slide"
+          >
+            →
+          </button>
         </div>
 
         <p className="learning-env__note">
