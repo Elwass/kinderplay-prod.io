@@ -341,30 +341,30 @@ html {
   }
 
   .hero-pill {
-    width: min(560px, 92vw);
+    width: min(620px, 96vw);
     max-width: none;
     height: auto;
-    min-height: 34px;
+    min-height: 32px;
     overflow: hidden;
   }
 
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 6px;
+    gap: 4px;
     padding-inline: 0;
     padding-top: 0;
-    margin-bottom: 14px;
+    margin-bottom: 10px;
   }
 
   .hero-content {
     transform: none;
     padding-bottom: 6px;
-    margin-top: 0;
+    margin-top: 8px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
   }
 
   .hero-register-button {
@@ -372,21 +372,21 @@ html {
   }
 
   .hero-logo {
-    height: clamp(160px, 50vw, 210px);
-    width: clamp(160px, 50vw, 210px);
+    height: clamp(140px, 42vw, 180px);
+    width: clamp(140px, 42vw, 180px);
     justify-self: center;
     order: 1;
     display: block;
     margin-bottom: -2px;
-    margin-top: -18px;
+    margin-top: -20px;
     position: relative;
-    top: -14px;
+    top: -16px;
   }
 
   .hero-announcement {
-    width: min(560px, 92vw);
+    width: min(620px, 96vw);
     order: 2;
-    gap: 6px;
+    gap: 4px;
     justify-content: center;
   }
 
@@ -395,38 +395,33 @@ html {
   }
 
   .hero-pill__content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px clamp(8px, 2vw, 12px);
+    padding: 6px 22px;
     gap: 6px;
   }
 
-  .hero-pill__content::after {
-    content: "";
-    width: 11px;
-    height: 1px;
+  .hero-pill__icon {
+    position: absolute;
+    left: 10px;
   }
 
   .hero-pill__text {
     width: 100%;
-  }
-
-  .hero-pill__text {
-    font-size: 10px;
+    font-size: 8.2px;
     letter-spacing: 0;
-    white-space: normal;
-    overflow-wrap: anywhere;
-    word-break: normal;
+    white-space: nowrap;
     overflow: hidden;
-    text-overflow: unset;
+    text-overflow: clip;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.05;
   }
 
   .hero-pill__icon {
-    height: 12px;
-    width: 10px;
+    height: 10px;
+    width: 9px;
   }
 
   .hero-content > div:first-child,
@@ -446,16 +441,39 @@ html {
 
   .hero-description {
     max-width: 360px;
-    line-height: 1.6;
+    gap: 6px;
+    line-height: 1.4;
+    font-size: 12px;
+  }
+
+  .hero-description p {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .hero-description p:last-child {
+    display: none;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+
+  .hero-content h2 {
+    font-size: 16px;
+    line-height: 1.2;
   }
 
   .hero-cta {
     flex: 1 1 0;
     min-width: 0;
     width: auto;
-    padding: 10px 12px;
-    font-size: 12px;
-    line-height: 1.25;
+    padding: 8px 10px;
+    font-size: 11px;
+    line-height: 1.2;
   }
 
   .hero-cta--primary {
@@ -470,7 +488,7 @@ html {
   .hero-cta-buttons {
     margin-top: 0;
     flex-wrap: nowrap;
-    gap: 8px;
+    gap: 6px;
     width: 100%;
   }
 
@@ -479,7 +497,7 @@ html {
     margin-bottom: 0;
     flex-direction: row;
     flex-wrap: nowrap;
-    gap: 12px;
+    gap: 8px;
     white-space: nowrap;
   }
 
@@ -500,15 +518,15 @@ html {
     flex-direction: column;
     align-items: center;
     gap: 2px;
-    font-size: 10.5px;
-    line-height: 1.1;
+    font-size: 10px;
+    line-height: 1.05;
     white-space: nowrap;
   }
 
   .hero-info-item > div {
     margin-top: 0;
-    font-size: 9.5px;
-    line-height: 1.1;
+    font-size: 9px;
+    line-height: 1.05;
   }
 
   .hero-info-item + .hero-info-item {
@@ -630,12 +648,12 @@ html {
   }
 
   .hero-topbar {
-    gap: 6px;
+    gap: 4px;
     justify-content: center;
   }
 
   .hero-announcement {
-    width: min(560px, 92vw);
+    width: min(620px, 96vw);
   }
 
   .hero-register-button {
@@ -646,7 +664,7 @@ html {
   }
 
   .hero-pill {
-    width: min(560px, 92vw);
+    width: min(620px, 96vw);
   }
 
   .hero-cta-buttons {
@@ -657,8 +675,8 @@ html {
 
   .hero-description {
     margin-top: 0;
-    gap: 10px;
-    font-size: 14px;
+    gap: 6px;
+    font-size: 12px;
   }
 
   .hero-content {
