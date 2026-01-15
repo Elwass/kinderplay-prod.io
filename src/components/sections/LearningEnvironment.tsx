@@ -6,11 +6,10 @@ import le4 from "../../assets/LE4.png";
 import le5 from "../../assets/LE5.png";
 import le6 from "../../assets/LE6.png";
 import le7 from "../../assets/LE7.png";
-import le8 from "../../assets/LE8.png";
 import decoLeft from "../../assets/LE_ICON_1.png";
 import decoRight from "../../assets/LE_ICON_2.png";
 
-const images = [le1, le2, le3, le4, le5, le6, le7, le8];
+const images = [le1, le2, le3, le4, le5, le6, le7];
 
 export default function LearningEnvironment() {
   const loopImages = useMemo(() => [...images, ...images], []);
@@ -41,7 +40,15 @@ export default function LearningEnvironment() {
           expression to physical confidence and quiet focus.
         </p>
 
-        <div className="learning-env__grid" data-reveal-stagger>
+        <div className="learning-env__grid learning-env__grid--desktop" data-reveal-stagger>
+          {images.map((src, index) => (
+            <div className="learning-env__card" key={src}>
+              <img src={src} alt={`Learning environment ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+
+        <div className="learning-env__grid learning-env__grid--mobile" data-reveal-stagger>
           <div className="learning-env__track">
             {loopImages.map((src, index) => (
               <div className="learning-env__card" key={`${src}-${index}`}>

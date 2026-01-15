@@ -125,6 +125,7 @@
 
   .why-right {
     min-height: 320px;
+    margin-inline: auto;
   }
 
   .why-grid {
@@ -135,12 +136,47 @@
 
 @media (max-width: 640px) {
   .why-title {
-    font-size: 34px;
-    margin-bottom: 24px;
+    font-size: 30px;
+    line-height: 1.08;
+    margin-bottom: 20px;
   }
 
   .why-col {
-    gap: 24px;
+    gap: 16px;
+  }
+
+  .why-grid {
+    gap: 20px;
+  }
+
+  .why-feature {
+    gap: 10px;
+  }
+
+  .why-icon {
+    width: 32px;
+    height: 32px;
+    margin-top: 1px;
+  }
+
+  .why-featureTitle {
+    font-size: 13px;
+    line-height: 1.1;
+  }
+
+  .why-desc {
+    font-size: 12.5px;
+    line-height: 1.4;
+  }
+
+  .why-right {
+    min-height: auto;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    background-size: cover;
+    background-position: center;
+    border-radius: 20px;
+    overflow: hidden;
   }
 }
 
