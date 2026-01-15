@@ -609,15 +609,20 @@ html {
   }
 
   .learning-env__grid {
-    display: flex;
-    gap: 0;
+    display: block;
     overflow-x: hidden;
-    flex-wrap: nowrap;
     padding: 0 0 12px;
     margin: 0 0 16px;
+    touch-action: pan-y;
+  }
+
+  .learning-env__track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
     transform: translateX(calc(var(--learning-env-index, 0) * -100%));
     transition: transform 0.35s ease;
-    touch-action: pan-y;
+    will-change: transform;
   }
 
   .learning-env__grid::-webkit-scrollbar {
@@ -726,7 +731,7 @@ html {
 }
 
 @media (max-width: 768px) and (prefers-reduced-motion: reduce) {
-  .learning-env__grid {
+  .learning-env__track {
     transition: none;
   }
 
@@ -1326,11 +1331,12 @@ html {
   }
 
   .learning-env__grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: block;
+    grid-template-columns: none;
   }
 
   .learning-env__card img {
-    height: 200px;
+    height: 130px;
   }
 
   .learning-env__decor {
@@ -1340,7 +1346,8 @@ html {
 
 @media (max-width: 480px) {
   .learning-env__grid {
-    grid-template-columns: 1fr;
+    display: block;
+    grid-template-columns: none;
   }
 }
 

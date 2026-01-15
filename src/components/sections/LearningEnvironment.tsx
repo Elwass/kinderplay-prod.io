@@ -15,6 +15,7 @@ const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 export default function LearningEnvironment() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const pauseTimeoutRef = useRef<number | null>(null);
   const intervalRef = useRef<number | null>(null);
 
@@ -44,12 +45,25 @@ export default function LearningEnvironment() {
   };
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const updateMatch = () => setIsMobile(mediaQuery.matches);
+    updateMatch();
+    if (mediaQuery.addEventListener) {
+      mediaQuery.addEventListener("change", updateMatch);
+      return () => mediaQuery.removeEventListener("change", updateMatch);
+    }
+    mediaQuery.addListener(updateMatch);
+    return () => mediaQuery.removeListener(updateMatch);
+  }, []);
+
+  useEffect(() => {
     if (intervalRef.current) {
       window.clearInterval(intervalRef.current);
       intervalRef.current = null;
     }
 
-    if (!isPaused) {
+    if (!isPaused && isMobile) {
       intervalRef.current = window.setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % images.length);
       }, 3500);
@@ -61,7 +75,7 @@ export default function LearningEnvironment() {
         intervalRef.current = null;
       }
     };
-  }, [isPaused]);
+  }, [isMobile, isPaused]);
 
   useEffect(() => {
     return () => {
@@ -106,11 +120,13 @@ export default function LearningEnvironment() {
           onPointerUp={() => schedulePause(1500)}
           onPointerLeave={() => schedulePause(1500)}
         >
-          {images.map((src, index) => (
-            <div className="learning-env__card" key={`${src}-${index}`}>
-              <img src={src} alt={`Learning environment ${index + 1}`} />
-            </div>
-          ))}
+          <div className="learning-env__track">
+            {images.map((src, index) => (
+              <div className="learning-env__card" key={`${src}-${index}`}>
+                <img src={src} alt={`Learning environment ${index + 1}`} />
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="learning-env__controls">
