@@ -345,16 +345,17 @@ html {
     max-width: none;
     height: auto;
     min-height: 32px;
-    overflow: hidden;
+    overflow: visible;
   }
 
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 3px;
+    gap: 2px;
     padding-inline: 0;
     padding-top: 0;
     margin-bottom: 8px;
+    align-items: center;
   }
 
   .hero-content {
@@ -377,10 +378,9 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin-bottom: 0;
-    margin-top: -8px;
-    position: relative;
-    top: -6px;
+    margin: 0 auto;
+    position: static;
+    transform: none;
   }
 
   .hero-announcement {
@@ -388,6 +388,7 @@ html {
     order: 2;
     gap: 4px;
     justify-content: center;
+    margin-top: 2px;
   }
 
   .hero-announcement button {
@@ -395,22 +396,20 @@ html {
   }
 
   .hero-pill__content {
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 6px 24px;
+    padding: 6px 12px;
     gap: 6px;
   }
 
   .hero-pill__icon {
-    position: absolute;
-    left: 10px;
+    position: static;
   }
 
   .hero-pill__text {
     width: 100%;
-    font-size: 8.6px;
+    font-size: 8px;
     letter-spacing: 0;
     white-space: nowrap;
     overflow: visible;
