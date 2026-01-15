@@ -628,20 +628,7 @@ html {
   }
 
   .learning-env__grid::after {
-    content: "";
-    position: absolute;
-    left: 16px;
-    right: 16px;
-    bottom: 6px;
-    height: 24px;
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(193, 214, 230, 0.5) 100%
-    );
-    border-radius: 999px;
-    pointer-events: none;
-    opacity: 0.7;
+    display: none;
   }
 
   .learning-env__grid::-webkit-scrollbar {
@@ -665,9 +652,10 @@ html {
     max-width: 70%;
     scroll-snap-align: center;
     border-radius: 28px;
-    box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
-    outline: 1px solid rgba(216, 176, 170, 0.35);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    box-shadow: none;
+    outline: none;
+    transition: transform 0.3s ease;
+    background: transparent;
   }
 
   .learning-env__card:active {
