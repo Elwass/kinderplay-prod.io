@@ -372,6 +372,10 @@ html {
   .readiness-list {
     display: none;
   }
+
+  .daycare-small-image {
+    display: none;
+  }
   .hero-section {
     min-height: 0 !important;
     height: auto;

@@ -53,7 +53,7 @@ const DaycareProgram = () => {
                 </ul>
               </div>
 
-              <div className="h-[clamp(140px,16vw,180px)] w-full max-w-[240px] overflow-hidden rounded-[24px] bg-white lg:mt-[18px]">
+              <div className="daycare-small-image h-[clamp(140px,16vw,180px)] w-full max-w-[240px] overflow-hidden rounded-[24px] bg-white lg:mt-[18px]">
                 <img
                   src={daycareSmall}
                   alt="Children learning together"
