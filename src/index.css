@@ -294,7 +294,8 @@ html {
 
 @media (max-width: 768px) {
   .hero-section {
-    min-height: auto !important;
+    min-height: 0 !important;
+    height: auto;
   }
 
   .hero-section::after {
@@ -317,9 +318,10 @@ html {
   }
 
   .hero-section .relative.z-10 {
-    min-height: auto !important;
+    min-height: 0 !important;
+    height: auto;
     padding-top: 0;
-    padding-bottom: 8px;
+    padding-bottom: 6px;
   }
 
   .hero-pill {
