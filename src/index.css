@@ -336,7 +336,7 @@ html {
   }
 
   .hero-pill {
-    width: min(680px, 96vw);
+    width: min(640px, 94vw);
     max-width: none;
     height: auto;
     min-height: 36px;
@@ -369,34 +369,40 @@ html {
     order: 1;
     display: block;
     margin-bottom: -10px;
-    margin-top: -6px;
+    margin-top: -12px;
     position: relative;
-    top: -4px;
+    top: -8px;
   }
 
   .hero-announcement {
     width: min(680px, 98vw);
     order: 2;
+    gap: 6px;
   }
 
   .hero-announcement button {
-    height: 10px;
-    width: 10px;
+    height: 9px;
+    width: 9px;
   }
 
   .hero-pill__content {
-    padding: 6px clamp(8px, 2.5vw, 14px);
-    gap: 8px;
+    padding: 6px clamp(6px, 2.2vw, 12px);
+    gap: 6px;
   }
 
   .hero-pill__text {
-    font-size: 9.6px;
+    font-size: 9.2px;
     letter-spacing: 0;
     white-space: nowrap;
     overflow: visible;
     text-overflow: clip;
     text-align: center;
     line-height: 1.2;
+  }
+
+  .hero-pill__icon {
+    height: 14px;
+    width: 12px;
   }
 
   .hero-description {
@@ -454,15 +460,16 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px;
-    font-size: 13px;
-    line-height: 1.15;
+    gap: 2px;
+    font-size: 10.5px;
+    line-height: 1.1;
+    white-space: nowrap;
   }
 
   .hero-info-item > div {
     margin-top: 0;
-    font-size: 11px;
-    line-height: 1.15;
+    font-size: 9.5px;
+    line-height: 1.1;
   }
 
   .hero-info-item + .hero-info-item {
@@ -474,6 +481,34 @@ html {
   .hero-register-button:active {
     transform: translateY(0);
     box-shadow: 0 6px 12px rgba(111, 95, 82, 0.12);
+  }
+
+  .feature-strip__inner {
+    padding-inline: 12px;
+  }
+
+  .feature-strip__grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .feature-strip__item {
+    gap: 6px;
+    font-size: 10px;
+    line-height: 1.1;
+    flex: 0 1 auto;
+  }
+
+  .feature-strip__text {
+    white-space: nowrap;
+  }
+
+  .feature-badge {
+    width: 18px;
+    height: 18px;
   }
 }
 
@@ -487,12 +522,12 @@ html {
   }
 
   .hero-topbar {
-    gap: 10px;
+    gap: 2px;
     justify-content: center;
   }
 
   .hero-announcement {
-    width: 100%;
+    width: min(680px, 98vw);
   }
 
   .hero-register-button {
@@ -503,7 +538,7 @@ html {
   }
 
   .hero-pill {
-    width: min(520px, 90vw);
+    width: min(640px, 94vw);
   }
 
   .hero-cta-buttons {
