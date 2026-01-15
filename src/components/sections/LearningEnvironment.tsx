@@ -1,3 +1,4 @@
+import { useRef, useState } from "react";
 import le1 from "../../assets/LE1.png";
 import le2 from "../../assets/LE2.png";
 import le3 from "../../assets/LE3.png";
@@ -12,6 +13,36 @@ import decoRight from "../../assets/LE_ICON_2.png";
 const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 
 export default function LearningEnvironment() {
+  const carouselRef = useRef<HTMLDivElement | null>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const getStepSize = () => {
+    const node = carouselRef.current;
+    if (!node) return 0;
+    const card = node.querySelector<HTMLElement>(".learning-env__card");
+    if (!card) return 0;
+    const styles = window.getComputedStyle(node);
+    const gap = parseFloat(styles.columnGap || "0");
+    return card.getBoundingClientRect().width + gap;
+  };
+
+  const handleScroll = () => {
+    const node = carouselRef.current;
+    if (!node) return;
+    const step = getStepSize();
+    if (!step) return;
+    const index = Math.round(node.scrollLeft / step);
+    setActiveIndex(Math.min(Math.max(index, 0), images.length - 1));
+  };
+
+  const scrollToIndex = (index: number) => {
+    const node = carouselRef.current;
+    if (!node) return;
+    const step = getStepSize();
+    if (!step) return;
+    node.scrollTo({ left: step * index, behavior: "smooth" });
+  };
+
   return (
     <section className="learning-env section-padding">
       <img
@@ -38,11 +69,30 @@ export default function LearningEnvironment() {
           expression to physical confidence and quiet focus.
         </p>
 
-        <div className="learning-env__grid">
+        <div
+          className="learning-env__grid"
+          ref={carouselRef}
+          onScroll={handleScroll}
+        >
           {images.map((src, index) => (
             <div className="learning-env__card" key={`${src}-${index}`}>
               <img src={src} alt={`Learning environment ${index + 1}`} />
             </div>
+          ))}
+        </div>
+
+        <div className="learning-env__dots" role="tablist" aria-label="Learning environment carousel">
+          {images.map((_, index) => (
+            <button
+              key={`learning-env-dot-${index}`}
+              type="button"
+              className={`learning-env__dot${
+                index === activeIndex ? " learning-env__dot--active" : ""
+              }`}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-pressed={index === activeIndex}
+              onClick={() => scrollToIndex(index)}
+            />
           ))}
         </div>
 
