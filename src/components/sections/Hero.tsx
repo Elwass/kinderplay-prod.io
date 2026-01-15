@@ -3,7 +3,7 @@ import logo from "../../assets/kinderra-logo.png";
 
 const Hero = () => {
   return (
-    <section className="relative w-screen min-h-[82vh] overflow-hidden">
+    <section className="hero-section relative w-screen min-h-[82vh] overflow-hidden">
       <img
         src={heroBg}
         alt="Kinderra Play background"
@@ -121,7 +121,7 @@ const Hero = () => {
           </button>
         </div>
 
-        <div className="relative -translate-y-10 lg:-translate-y-16 2xl:-translate-y-20">
+        <div className="hero-content relative -translate-y-10 lg:-translate-y-16 2xl:-translate-y-20">
           <div className="mt-[clamp(20px,2.6vw,48px)] flex w-full flex-col items-center text-center">
             <h1 className="text-[clamp(32px,3.4vw,64px)] font-semibold leading-[1.1] text-[#6F5F52]">
               Early Learning Center
@@ -131,7 +131,7 @@ const Hero = () => {
             </h2>
           </div>
 
-          <div className="mt-[clamp(18px,3.5vw,44px)] flex w-full max-w-[900px] flex-col items-center gap-[clamp(10px,2.2vw,20px)] text-center text-[clamp(14px,1.6vw,20px)] leading-[1.5] text-[#6F5F52]">
+          <div className="hero-description mt-[clamp(18px,3.5vw,44px)] flex w-full max-w-[900px] flex-col items-center gap-[clamp(10px,2.2vw,20px)] text-center text-[clamp(14px,1.6vw,20px)] leading-[1.5] text-[#6F5F52]">
             <p>
               <span className="font-semibold">
                 Kinderra Play, a premium early learning center
@@ -170,22 +170,22 @@ const Hero = () => {
             </button>
           </div>
 
-          <div className="mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
-            <div className="text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+          <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
+            <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               1-5 y.o
               <div className="mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
                 Age
               </div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
-            <div className="text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+            <div className="hero-info-item hero-info-item--language text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               Bilingual
               <div className="mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
                 Language
               </div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
-            <div className="text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+            <div className="hero-info-item hero-info-item--program text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               Full &amp; Half Day Programs
               <div className="mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
                 Program
