@@ -318,8 +318,8 @@ html {
 
   .hero-section .relative.z-10 {
     min-height: auto;
-    padding-top: 18px;
-    padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 16px;
   }
 
   .hero-pill {
@@ -329,14 +329,18 @@ html {
   .hero-topbar {
     gap: 12px;
     padding-inline: 0;
-    padding-top: 8px;
-    margin-bottom: 6px;
+    padding-top: 4px;
+    margin-bottom: 2px;
   }
 
   .hero-content {
     transform: none;
     padding-bottom: 8px;
     margin-top: 0;
+  }
+
+  .hero-register-button {
+    display: none;
   }
 
   .hero-logo {
@@ -368,9 +372,9 @@ html {
   }
 
   .hero-info {
-    margin-top: 20px;
-    margin-bottom: 28px;
-    gap: 14px;
+    margin-top: 16px;
+    margin-bottom: 20px;
+    gap: 12px;
   }
 
   .hero-info-item--program {
