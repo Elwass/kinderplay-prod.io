@@ -621,7 +621,7 @@ html {
     flex-wrap: nowrap;
     gap: 0;
     transform: translateX(calc(var(--learning-env-index, 0) * -100%));
-    transition: transform 0.35s ease;
+    transition: transform 0.5s ease;
     will-change: transform;
   }
 

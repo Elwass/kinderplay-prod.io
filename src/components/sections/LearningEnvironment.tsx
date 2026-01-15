@@ -13,6 +13,8 @@ import decoRight from "../../assets/LE_ICON_2.png";
 const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 
 export default function LearningEnvironment() {
+  const autoSlideIntervalMs = 3200;
+  const interactionPauseMs = 2500;
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -24,7 +26,7 @@ export default function LearningEnvironment() {
     setActiveIndex(clampedIndex);
   };
 
-  const schedulePause = (durationMs = 2000) => {
+  const schedulePause = (durationMs = interactionPauseMs) => {
     setIsPaused(true);
     if (pauseTimeoutRef.current) {
       window.clearTimeout(pauseTimeoutRef.current);
@@ -66,7 +68,7 @@ export default function LearningEnvironment() {
     if (!isPaused && isMobile) {
       intervalRef.current = window.setInterval(() => {
         setActiveIndex((prev) => (prev + 1) % images.length);
-      }, 3500);
+      }, autoSlideIntervalMs);
     }
 
     return () => {
@@ -116,9 +118,9 @@ export default function LearningEnvironment() {
           className="learning-env__grid"
           data-reveal-stagger
           style={{ "--learning-env-index": activeIndex } as CSSProperties}
-          onPointerDown={() => schedulePause(3000)}
-          onPointerUp={() => schedulePause(1500)}
-          onPointerLeave={() => schedulePause(1500)}
+          onPointerDown={() => schedulePause(interactionPauseMs)}
+          onPointerUp={() => schedulePause(interactionPauseMs)}
+          onPointerLeave={() => schedulePause(interactionPauseMs)}
         >
           <div className="learning-env__track">
             {images.map((src, index) => (
