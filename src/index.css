@@ -344,9 +344,9 @@ html {
   .hero-topbar {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 2px;
     padding-inline: 0;
-    padding-top: 0;
+    padding-top: 2px;
     margin-bottom: 2px;
   }
 
@@ -366,26 +366,26 @@ html {
     justify-self: center;
     order: 1;
     display: block;
-    margin-bottom: -6px;
+    margin-bottom: -8px;
   }
 
   .hero-announcement {
-    width: min(600px, 96vw);
+    width: min(680px, 98vw);
     order: 2;
   }
 
   .hero-pill__content {
-    padding: 6px clamp(14px, 4vw, 22px);
+    padding: 6px clamp(10px, 3vw, 16px);
   }
 
   .hero-pill__text {
-    font-size: 10.5px;
+    font-size: 10px;
     letter-spacing: 0;
-    white-space: normal;
+    white-space: nowrap;
     overflow: visible;
     text-overflow: unset;
     text-align: center;
-    line-height: 1.25;
+    line-height: 1.2;
   }
 
   .hero-description {
