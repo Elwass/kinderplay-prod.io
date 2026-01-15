@@ -623,12 +623,8 @@ html {
     flex-wrap: nowrap;
     gap: 12px;
     animation: learningEnvMarquee 24s linear infinite;
+    animation-timing-function: linear;
     will-change: transform;
-  }
-
-  .learning-env__grid:active .learning-env__track,
-  .learning-env__grid:focus-within .learning-env__track {
-    animation-play-state: paused;
   }
 
   .learning-env__grid::after {
@@ -1338,24 +1334,32 @@ html {
 
 @media (min-width: 769px) {
   .learning-env__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    display: block;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
     margin-bottom: 28px;
-    overflow: visible;
+    overflow: hidden;
     padding: 0;
+    background: transparent;
   }
 
   .learning-env__track {
-    display: contents;
-    transform: none;
-    transition: none;
-    will-change: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    animation: learningEnvMarquee 16s linear infinite;
+    animation-timing-function: linear;
+    will-change: transform;
+    background: transparent;
   }
 
   .learning-env__card {
-    flex: initial;
-    max-width: none;
+    flex: 0 0 260px;
+    max-width: 260px;
+  }
+
+  .learning-env__grid::after {
+    display: none;
   }
 }
 
