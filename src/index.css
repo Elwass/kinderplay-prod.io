@@ -609,7 +609,7 @@ html {
   .learning-env__grid {
     display: flex;
     gap: 12px;
-    overflow-x: auto;
+    overflow-x: hidden;
     flex-wrap: nowrap;
     scroll-snap-type: x mandatory;
     scroll-snap-stop: always;
@@ -619,6 +619,7 @@ html {
     -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
     overscroll-behavior-x: contain;
+    touch-action: pan-y;
   }
 
   .learning-env__grid::-webkit-scrollbar {
@@ -638,8 +639,8 @@ html {
   }
 
   .learning-env__card {
-    flex: 0 0 58%;
-    max-width: 58%;
+    flex: 0 0 56%;
+    max-width: 56%;
     scroll-snap-align: center;
     border-radius: 28px;
     box-shadow: 0 10px 22px rgba(52, 70, 90, 0.12);
@@ -652,15 +653,23 @@ html {
   }
 
   .learning-env__card img {
-    height: 140px;
+    height: 130px;
     object-fit: cover;
+  }
+
+  .learning-env__controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 12px;
   }
 
   .learning-env__dots {
     display: flex;
     justify-content: center;
     gap: 6px;
-    margin-bottom: 12px;
+    margin-bottom: 0;
   }
 
   .learning-env__dot {
@@ -724,7 +733,8 @@ html {
   }
 
   .learning-env__card,
-  .learning-env__dot {
+  .learning-env__dot,
+  .learning-env__arrow {
     transition: none;
   }
 }
@@ -1243,6 +1253,26 @@ html {
 
 .learning-env__dots {
   display: none;
+}
+
+.learning-env__controls {
+  display: none;
+}
+
+.learning-env__arrow {
+  border: none;
+  background: transparent;
+  color: #d88957;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.learning-env__arrow:active {
+  transform: scale(0.95);
 }
 
 .learning-env__button {
