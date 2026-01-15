@@ -239,6 +239,14 @@ html {
   flex: 0 0 auto;
 }
 
+.feature-badge {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  display: block;
+  flex: 0 0 auto;
+}
+
 .feature-strip {
   background: linear-gradient(
     180deg,
