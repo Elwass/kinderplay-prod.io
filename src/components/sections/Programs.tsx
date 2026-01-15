@@ -21,7 +21,8 @@ const programs = [
 
 const Programs = () => {
   return (
-    <section className="bg-beige px-6 py-16 md:px-16">
+    <section className="section-padding section-gradient section-animate relative bg-beige px-6 md:px-16">
+      <div className="section-ornament section-ornament--top-right" aria-hidden="true" />
       <div className="mx-auto max-w-6xl">
         <div className="mb-10 flex flex-wrap items-center justify-between gap-6">
           <div>
@@ -32,14 +33,17 @@ const Programs = () => {
               Program belajar sesuai tahap perkembangan.
             </h2>
           </div>
-          <p className="max-w-md text-sm leading-relaxed text-text/70">
+          <p className="max-w-md text-sm font-normal leading-relaxed text-text/70">
             Kurikulum kami fleksibel dan disesuaikan dengan kesiapan setiap anak untuk
             memberikan pengalaman belajar yang menyenangkan.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-3">
           {programs.map((program) => (
-            <article key={program.title} className="rounded-3xl bg-white p-6 shadow-sm">
+            <article
+              key={program.title}
+              className="program-card rounded-3xl bg-white p-6 shadow-sm"
+            >
               <div className="mb-4 inline-flex rounded-full bg-primary/15 px-3 py-1 text-xs font-semibold text-primary">
                 {program.age}
               </div>

@@ -2,8 +2,10 @@ import readinessImg from "../../assets/Rectangle 41 (1).png";
 
 const Readiness = () => {
   return (
-    <section className="section-padding w-full bg-[#F6EFE7]">
-      <div className="section-container flex w-full flex-col gap-10 lg:gap-12">
+    <section className="section-padding section-gradient section-animate relative w-full overflow-hidden bg-[#F6EFE7]">
+      <div className="section-ornament section-ornament--top-right" aria-hidden="true" />
+      <div className="section-ornament section-ornament--bottom-left" aria-hidden="true" />
+      <div className="section-container relative z-10 flex w-full flex-col gap-10 lg:gap-12">
         <div className="text-center text-[#6F5F52]">
           <h2 className="text-[clamp(34px,3.2vw,48px)] font-semibold leading-[1.2]">
             Apa yang dimaksud dengan{" "}
@@ -16,7 +18,7 @@ const Readiness = () => {
         </div>
 
         <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,520px)_minmax(0,1fr)] lg:items-center lg:gap-12">
-          <div className="h-[clamp(260px,30vw,360px)] w-full overflow-hidden rounded-[32px] bg-white">
+          <div className="h-[clamp(220px,26vw,320px)] w-full overflow-hidden rounded-[32px] bg-white">
             <img
               src={readinessImg}
               alt="Children learning"
