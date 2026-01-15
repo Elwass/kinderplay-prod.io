@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { type CSSProperties, useEffect, useRef, useState } from "react";
 import le1 from "../../assets/LE1.png";
 import le2 from "../../assets/LE2.png";
 import le3 from "../../assets/LE3.png";
@@ -13,35 +13,64 @@ import decoRight from "../../assets/LE_ICON_2.png";
 const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 
 export default function LearningEnvironment() {
-  const carouselRef = useRef<HTMLDivElement | null>(null);
   const [activeIndex, setActiveIndex] = useState(0);
-
-  const getStepSize = () => {
-    const node = carouselRef.current;
-    if (!node) return 0;
-    const card = node.querySelector<HTMLElement>(".learning-env__card");
-    if (!card) return 0;
-    const styles = window.getComputedStyle(node);
-    const gap = parseFloat(styles.columnGap || "0");
-    return card.getBoundingClientRect().width + gap;
-  };
-
-  const handleScroll = () => {
-    const node = carouselRef.current;
-    if (!node) return;
-    const step = getStepSize();
-    if (!step) return;
-    const index = Math.round(node.scrollLeft / step);
-    setActiveIndex(Math.min(Math.max(index, 0), images.length - 1));
-  };
+  const [isPaused, setIsPaused] = useState(false);
+  const pauseTimeoutRef = useRef<number | null>(null);
+  const intervalRef = useRef<number | null>(null);
 
   const scrollToIndex = (index: number) => {
-    const node = carouselRef.current;
-    if (!node) return;
-    const step = getStepSize();
-    if (!step) return;
-    node.scrollTo({ left: step * index, behavior: "smooth" });
+    const clampedIndex = Math.min(Math.max(index, 0), images.length - 1);
+    setActiveIndex(clampedIndex);
   };
+
+  const schedulePause = (durationMs = 2000) => {
+    setIsPaused(true);
+    if (pauseTimeoutRef.current) {
+      window.clearTimeout(pauseTimeoutRef.current);
+    }
+    pauseTimeoutRef.current = window.setTimeout(() => {
+      setIsPaused(false);
+    }, durationMs);
+  };
+
+  const handlePrev = () => {
+    scrollToIndex(activeIndex - 1);
+    schedulePause();
+  };
+
+  const handleNext = () => {
+    scrollToIndex(activeIndex + 1);
+    schedulePause();
+  };
+
+  useEffect(() => {
+    if (intervalRef.current) {
+      window.clearInterval(intervalRef.current);
+      intervalRef.current = null;
+    }
+
+    if (!isPaused) {
+      intervalRef.current = window.setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % images.length);
+      }, 3500);
+    }
+
+    return () => {
+      if (intervalRef.current) {
+        window.clearInterval(intervalRef.current);
+        intervalRef.current = null;
+      }
+    };
+  }, [isPaused]);
+
+  useEffect(() => {
+    return () => {
+      if (pauseTimeoutRef.current) {
+        window.clearTimeout(pauseTimeoutRef.current);
+        pauseTimeoutRef.current = null;
+      }
+    };
+  }, []);
 
   return (
     <section className="learning-env section-padding">
@@ -71,9 +100,11 @@ export default function LearningEnvironment() {
 
         <div
           className="learning-env__grid"
-          ref={carouselRef}
-          onScroll={handleScroll}
           data-reveal-stagger
+          style={{ "--learning-env-index": activeIndex } as CSSProperties}
+          onPointerDown={() => schedulePause(3000)}
+          onPointerUp={() => schedulePause(1500)}
+          onPointerLeave={() => schedulePause(1500)}
         >
           {images.map((src, index) => (
             <div className="learning-env__card" key={`${src}-${index}`}>
@@ -82,19 +113,40 @@ export default function LearningEnvironment() {
           ))}
         </div>
 
-        <div className="learning-env__dots" role="tablist" aria-label="Learning environment carousel">
-          {images.map((_, index) => (
-            <button
-              key={`learning-env-dot-${index}`}
-              type="button"
-              className={`learning-env__dot${
-                index === activeIndex ? " learning-env__dot--active" : ""
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-pressed={index === activeIndex}
-              onClick={() => scrollToIndex(index)}
-            />
-          ))}
+        <div className="learning-env__controls">
+          <button
+            type="button"
+            className="learning-env__arrow learning-env__arrow--prev"
+            onClick={handlePrev}
+            aria-label="Previous slide"
+          >
+            ←
+          </button>
+          <div className="learning-env__dots" role="tablist" aria-label="Learning environment carousel">
+            {images.map((_, index) => (
+              <button
+                key={`learning-env-dot-${index}`}
+                type="button"
+                className={`learning-env__dot${
+                  index === activeIndex ? " learning-env__dot--active" : ""
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+                aria-pressed={index === activeIndex}
+                onClick={() => {
+                  scrollToIndex(index);
+                  schedulePause();
+                }}
+              />
+            ))}
+          </div>
+          <button
+            type="button"
+            className="learning-env__arrow learning-env__arrow--next"
+            onClick={handleNext}
+            aria-label="Next slide"
+          >
+            →
+          </button>
         </div>
 
         <p className="learning-env__note">
