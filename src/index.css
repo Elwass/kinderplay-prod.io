@@ -1353,6 +1353,8 @@ html {
     width: auto;
     max-width: var(--container-max);
     margin: 0 auto 28px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
   }
 
   .learning-env__grid--mobile,
