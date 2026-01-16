@@ -1,10 +1,15 @@
 import decorLeft from "../../assets/Vector.png";
 import decorRight from "../../assets/vector (1).png";
 import decorAlt from "../../assets/Vector (2).png";
+import phoneIcon from "../../assets/Vector (6).png";
+import emailIcon from "../../assets/Vector (7).png";
+import facebookIcon from "../../assets/Vector (8).png";
+import instagramIcon from "../../assets/Vector (9).png";
 import "./CTAPlusFooter.css";
 
 const whatsappLink = "https://wa.me/6288901910210";
 const instagramLink = "https://www.instagram.com/kinderraplay";
+const emailLink = "mailto:kinderra.play@gmail.com";
 
 const CTAPlusFooter = () => {
   return (
@@ -67,18 +72,18 @@ const CTAPlusFooter = () => {
           </div>
           <div className="cta-footer__column">
             <h3>Contact</h3>
-            <p className="cta-footer__item">
+            <a className="cta-footer__item" href={whatsappLink}>
               <span className="cta-footer__icon" aria-hidden="true">
-                ☎
+                <img src={phoneIcon} alt="" />
               </span>
               (+62) 819-0710-0210
-            </p>
-            <p className="cta-footer__item">
+            </a>
+            <a className="cta-footer__item" href={emailLink}>
               <span className="cta-footer__icon" aria-hidden="true">
-                ✉
+                <img src={emailIcon} alt="" />
               </span>
               kinderra.play@gmail.com
-            </p>
+            </a>
           </div>
           <div className="cta-footer__column cta-footer__column--follow">
             <h3>Follow Us</h3>
@@ -88,18 +93,14 @@ const CTAPlusFooter = () => {
                 href={whatsappLink}
                 aria-label="Facebook"
               >
-                <svg viewBox="0 0 24 24" role="img" focusable="false">
-                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953h-1.513c-1.49 0-1.953.925-1.953 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
-                </svg>
+                <img src={facebookIcon} alt="" />
               </a>
               <a
                 className="cta-footer__social-icon"
                 href={instagramLink}
                 aria-label="Instagram"
               >
-                <svg viewBox="0 0 24 24" role="img" focusable="false">
-                  <path d="M12 0c-3.259 0-3.668.013-4.948.072-1.277.059-2.45.322-3.417 1.289C2.668 2.327 2.405 3.5 2.346 4.777 2.287 6.057 2.275 6.466 2.275 9.725v4.55c0 3.259.013 3.668.071 4.948.059 1.277.322 2.45 1.289 3.417.967.967 2.14 1.23 3.417 1.289 1.28.058 1.689.071 4.948.071s3.668-.013 4.948-.071c1.277-.059 2.45-.322 3.417-1.289.967-.967 1.23-2.14 1.289-3.417.058-1.28.071-1.689.071-4.948v-4.55c0-3.259-.013-3.668-.071-4.948-.059-1.277-.322-2.45-1.289-3.417C19.398.393 18.225.131 16.948.072 15.668.013 15.259 0 12 0zm0 5.838A6.162 6.162 0 1 0 18.162 12 6.162 6.162 0 0 0 12 5.838zm0 10.162A4 4 0 1 1 16 12a4 4 0 0 1-4 4zm6.406-11.845a1.44 1.44 0 1 1-1.44-1.44 1.44 1.44 0 0 1 1.44 1.44z" />
-                </svg>
+                <img src={instagramIcon} alt="" />
               </a>
             </div>
           </div>
