@@ -13,7 +13,8 @@ import decoRight from "../../assets/LE_ICON_2.png";
 const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 
 export default function LearningEnvironment() {
-  const loopImages = useMemo(() => [...images, ...images], []);
+  const gridImages = useMemo(() => images.slice(0, 7), []);
+  const loopImages = useMemo(() => [...gridImages, ...gridImages], [gridImages]);
 
   return (
     <section className="learning-env section-padding">
@@ -42,7 +43,7 @@ export default function LearningEnvironment() {
         </p>
 
         <div className="learning-env__grid learning-env__grid--desktop" data-reveal-stagger>
-          {images.map((src, index) => (
+          {gridImages.map((src, index) => (
             <div className="learning-env__card" key={src}>
               <img src={src} alt={`Learning environment ${index + 1}`} />
             </div>
@@ -55,7 +56,7 @@ export default function LearningEnvironment() {
               <div className="learning-env__card" key={`${src}-${index}`}>
                 <img
                   src={src}
-                  alt={`Learning environment ${(index % images.length) + 1}`}
+                  alt={`Learning environment ${(index % gridImages.length) + 1}`}
                 />
               </div>
             ))}
