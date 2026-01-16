@@ -1,6 +1,8 @@
 import heroBg from "../../assets/Hero Section.png";
 import logo from "../../assets/kinderra-logo.png";
 
+const whatsappLink = "https://wa.me/088901910210";
+
 const Hero = () => {
   return (
     <section
@@ -22,8 +24,8 @@ const Hero = () => {
           />
 
           <div className="hero-announcement">
-            <button
-              type="button"
+            <a
+              href={whatsappLink}
               aria-label="Previous announcement"
               className="h-[clamp(10px,1.1vw,12px)] w-[clamp(10px,1.1vw,12px)] text-[#D98956] opacity-[0.75]"
             >
@@ -41,7 +43,7 @@ const Hero = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </a>
 
             <div className="hero-pill">
               <div className="hero-pill__content">
@@ -72,8 +74,8 @@ const Hero = () => {
               </div>
             </div>
 
-            <button
-              type="button"
+            <a
+              href={whatsappLink}
               aria-label="Next announcement"
               className="h-[clamp(10px,1.1vw,12px)] w-[clamp(10px,1.1vw,12px)] text-[#D98956] opacity-[0.75]"
             >
@@ -91,11 +93,11 @@ const Hero = () => {
                   strokeLinejoin="round"
                 />
               </svg>
-            </button>
+            </a>
           </div>
 
-          <button
-            type="button"
+          <a
+            href={whatsappLink}
             className="hero-register-button"
           >
             <span className="text-[clamp(12px,1vw,14px)] font-semibold uppercase text-[#6F5F52]">
@@ -115,7 +117,7 @@ const Hero = () => {
                 strokeLinejoin="round"
               />
             </svg>
-          </button>
+          </a>
         </div>
 
         <div className="hero-content relative -translate-y-10 lg:-translate-y-16 2xl:-translate-y-20">
@@ -151,20 +153,20 @@ const Hero = () => {
           </div>
 
           <div className="hero-cta-buttons">
-            <button
-              type="button"
+            <a
+              href={whatsappLink}
               className="hero-cta hero-cta--primary"
             >
               <span>Register for a</span>
               <span>Trial Class</span>
-            </button>
-            <button
-              type="button"
+            </a>
+            <a
+              href={whatsappLink}
               className="hero-cta hero-cta--secondary"
             >
               <span>Get Enrollment</span>
               <span>Information</span>
-            </button>
+            </a>
           </div>
 
           <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">

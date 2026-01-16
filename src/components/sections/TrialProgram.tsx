@@ -1,5 +1,7 @@
 import imgTrial from "../../assets/Rectangle 31 (3).png";
 
+const whatsappLink = "https://wa.me/088901910210";
+
 export default function TrialProgram() {
   return (
     <section className="trial-section section-padding">
@@ -40,11 +42,11 @@ export default function TrialProgram() {
         </div>
 
         <div className="trial-cta">
-          <button className="trial-button" type="button">
+          <a className="trial-button" href={whatsappLink}>
             REGISTER OUR
             <br />
             TRIAL CLASS
-          </button>
+          </a>
           <p className="trial-footnote">
             A calm, supportive first step into
             <br />
