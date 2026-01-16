@@ -1229,9 +1229,13 @@ html {
 
 .learning-env__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
-  margin-bottom: 28px;
+  margin: 0 auto 28px;
+  max-width: var(--container-max);
+  width: auto;
+  position: static;
+  overflow: visible;
 }
 
 .learning-env__grid--mobile {
@@ -1318,7 +1322,7 @@ html {
 
 @media (max-width: 1024px) {
   .learning-env__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .learning-env__card img {
@@ -1328,6 +1332,36 @@ html {
   .learning-env__decor--left,
   .learning-env__decor--right {
     width: 100px;
+  }
+}
+
+@media (min-width: 769px) {
+  .learning-env__grid {
+    display: grid !important;
+    position: static;
+    overflow: visible;
+    transform: none;
+    animation: none;
+    width: auto;
+    max-width: var(--container-max);
+    margin: 0 auto 28px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .learning-env__grid--mobile,
+  .learning-env__track {
+    display: none !important;
+    position: static;
+    overflow: visible;
+    transform: none;
+    animation: none;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    flex-wrap: wrap;
+    white-space: normal;
+    will-change: auto;
   }
 }
 
