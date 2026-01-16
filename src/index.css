@@ -1233,7 +1233,7 @@ html {
   color: rgba(107, 90, 74, 0.8);
 }
 
-.learning-env__grid {
+.learning-env__gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
@@ -1268,6 +1268,10 @@ html {
   height: 170px;
   object-fit: cover;
   display: block;
+}
+
+.learning-env__card--thumb img {
+  height: 110px;
 }
 
 .learning-env__note {
