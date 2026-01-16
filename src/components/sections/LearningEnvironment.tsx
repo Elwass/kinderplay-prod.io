@@ -14,7 +14,7 @@ const images = [le1, le2, le3, le4, le5, le6, le7, le8];
 const whatsappLink = "https://wa.me/6288901910210";
 
 export default function LearningEnvironment() {
-  const gridImages = useMemo(() => images.slice(0, 7), []);
+  const gridImages = useMemo(() => images.slice(0, 8), []);
   const loopImages = useMemo(() => [...gridImages, ...gridImages], [gridImages]);
 
   return (
