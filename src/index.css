@@ -956,10 +956,14 @@ html {
   }
 }
 
+@media (max-width: 640px) {
+  .trial-section { padding-top: 0; }
+}
+
 .trial-section {
   position: relative;
   background: #fff;
-  overflow: hidden;
+  overflow: hidden; 
 }
 
 .trial-container {
