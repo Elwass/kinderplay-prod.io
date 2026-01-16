@@ -1,3 +1,14 @@
+import le1 from "../../assets/LE1.png";
+import le2 from "../../assets/LE2.png";
+import le3 from "../../assets/LE3.png";
+import le4 from "../../assets/LE4.png";
+import le5 from "../../assets/LE5.png";
+import le6 from "../../assets/LE6.png";
+import le7 from "../../assets/LE7.png";
+import le8 from "../../assets/LE8.png";
+
+const images = [le1, le2, le3, le4, le5, le6, le7, le8];
+
 const Environment = () => {
   return (
     <section className="bg-white px-6 py-16 md:px-16">
@@ -31,13 +42,19 @@ const Environment = () => {
           <div className="absolute -right-4 -top-4 h-32 w-32 rounded-full bg-primary/20" />
           <div className="absolute -left-6 bottom-0 h-20 w-20 rounded-full bg-blue/70" />
           <div className="relative rounded-[32px] border border-[#F1E6DB] bg-[#FFF9F3] p-6">
-            <div className="space-y-4">
-              <div className="h-40 rounded-3xl bg-white shadow-inner" />
-              <div className="h-24 rounded-3xl bg-white shadow-inner" />
-              <div className="flex gap-4">
-                <div className="h-16 flex-1 rounded-3xl bg-white shadow-inner" />
-                <div className="h-16 flex-1 rounded-3xl bg-white shadow-inner" />
-              </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {images.map((src, index) => (
+                <div
+                  key={src}
+                  className="aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-inner"
+                >
+                  <img
+                    src={src}
+                    alt={`Learning environment ${index + 1}`}
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
