@@ -45,7 +45,7 @@ const Environment = () => {
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {images.map((src, index) => (
                 <div
-                  key={src}
+                  key={`${index}-${src}`}
                   className="aspect-[4/3] overflow-hidden rounded-3xl bg-white shadow-inner"
                 >
                   <img
