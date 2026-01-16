@@ -424,7 +424,7 @@ html {
     height: auto;
     min-height: 32px;
     overflow: visible;
-     transform: translateY(-25px); /* naikin, adjust */
+     transform: translateY(-23px); /* naikin, adjust */
   }
 
   .hero-topbar {
@@ -509,7 +509,7 @@ html {
   .hero-description,
   .hero-cta-buttons,
   .hero-info {
-    margin-top: 0;
+    margin-top: 1px;
   }
 
   .hero-info {
@@ -556,7 +556,7 @@ html {
   }
 
   .hero-cta-buttons {
-    margin-top: 0;
+    margin-top: 8px;
     flex-wrap: nowrap;
     gap: 6px;
     width: 100%;
@@ -701,6 +701,7 @@ html {
   .feature-strip__marquee {
     overflow: hidden;
     width: 100%;
+    padding-top:10px;
   }
 
   .feature-strip__track {
