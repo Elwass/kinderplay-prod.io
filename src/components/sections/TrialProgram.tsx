@@ -1,6 +1,6 @@
 import imgTrial from "../../assets/Rectangle 31 (3).png";
 
-const whatsappLink = "https://wa.me/088901910210";
+const whatsappLink = "https://wa.me/6288901910210";
 
 export default function TrialProgram() {
   return (

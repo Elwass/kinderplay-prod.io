@@ -1,4 +1,4 @@
-const whatsappLink = "https://wa.me/088901910210";
+const whatsappLink = "https://wa.me/6288901910210";
 
 const FooterCTA = () => {
   return (

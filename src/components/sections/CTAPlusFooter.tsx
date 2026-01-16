@@ -3,7 +3,7 @@ import decorRight from "../../assets/vector (1).png";
 import decorAlt from "../../assets/Vector (2).png";
 import "./CTAPlusFooter.css";
 
-const whatsappLink = "https://wa.me/088901910210";
+const whatsappLink = "https://wa.me/6288901910210";
 const instagramLink = "https://www.instagram.com/kinderraplay";
 
 const CTAPlusFooter = () => {

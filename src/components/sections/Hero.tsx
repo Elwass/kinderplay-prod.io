@@ -1,7 +1,7 @@
 import heroBg from "../../assets/Hero Section.png";
 import logo from "../../assets/kinderra-logo.png";
 
-const whatsappLink = "https://wa.me/088901910210";
+const whatsappLink = "https://wa.me/6288901910210";
 
 const Hero = () => {
   return (
@@ -67,10 +67,10 @@ const Hero = () => {
                     strokeLinecap="round"
                   />
                 </svg>
-                <p className="hero-pill__text">
+                <a className="hero-pill__text" href={whatsappLink}>
                   JOIN OUR TRIAL CLASS &amp; STORY BOOK PLAYDATE{" "}
-                  <span className="font-semibold">ON JANUARY 17 &amp; 24!</span>
-                </p>
+                  <span className="font-semibold">ON FEBRUARY 17!</span>
+                </a>
               </div>
             </div>
 
