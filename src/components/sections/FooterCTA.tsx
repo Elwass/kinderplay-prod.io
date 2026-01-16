@@ -1,4 +1,4 @@
-import Button from "../ui/Button";
+const whatsappLink = "https://wa.me/6288901910210";
 
 const FooterCTA = () => {
   return (
@@ -15,10 +15,18 @@ const FooterCTA = () => {
             </p>
           </div>
           <div className="flex flex-col gap-4">
-            <Button className="bg-white text-primary">Hubungi Kami</Button>
-            <Button variant="secondary" className="border-white text-white">
+            <a
+              href={whatsappLink}
+              className="inline-flex items-center justify-center bg-white font-semibold text-primary transition"
+            >
+              Hubungi Kami
+            </a>
+            <a
+              href={whatsappLink}
+              className="inline-flex items-center justify-center border-[1px] border-white font-semibold text-white transition"
+            >
               Lihat Brosur
-            </Button>
+            </a>
           </div>
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/70">
