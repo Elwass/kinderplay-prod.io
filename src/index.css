@@ -1355,6 +1355,8 @@ html {
     margin: 0 auto 28px;
     grid-template-columns: repeat(4, minmax(0, 1fr));
     grid-template-rows: repeat(2, auto);
+    grid-auto-flow: row;
+    grid-auto-rows: auto;
   }
 
   .learning-env__grid--mobile,
