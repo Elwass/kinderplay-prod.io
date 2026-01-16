@@ -11,6 +11,7 @@ import decoLeft from "../../assets/LE_ICON_1.png";
 import decoRight from "../../assets/LE_ICON_2.png";
 
 const images = [le1, le2, le3, le4, le5, le6, le7, le8];
+const whatsappLink = "https://wa.me/088901910210";
 
 export default function LearningEnvironment() {
   const gridImages = useMemo(() => images.slice(0, 7), []);
@@ -69,10 +70,10 @@ export default function LearningEnvironment() {
           pediatricians
         </p>
 
-        <button className="learning-env__button" type="button">
+        <a className="learning-env__button" href={whatsappLink}>
           Watch Our Room Tour
           <span aria-hidden="true">→</span>
-        </button>
+        </a>
       </div>
     </section>
   );

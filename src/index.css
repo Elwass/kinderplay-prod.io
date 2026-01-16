@@ -1326,11 +1326,7 @@ html {
 
 @media (max-width: 1024px) {
   .learning-env__card img {
-    height: 160px;
-  }
-
-  .learning-env__card--thumb img {
-    height: 96px;
+    height: 190px;
   }
 
   .learning-env__decor--left,
