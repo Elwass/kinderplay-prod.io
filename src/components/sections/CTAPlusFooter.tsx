@@ -84,6 +84,15 @@ const CTAPlusFooter = () => {
               </span>
               kinderra.play@gmail.com
             </a>
+            <a
+              className="cta-footer__item cta-footer__item--ig"
+              href={instagramLink}
+            >
+              <span className="cta-footer__icon" aria-hidden="true">
+                <img src={instagramIcon} alt="" />
+              </span>
+              @kinderraplay
+            </a>
           </div>
           <div className="cta-footer__column cta-footer__column--follow">
             <h3>Follow Us</h3>
