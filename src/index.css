@@ -1363,6 +1363,11 @@ html {
     transform: none;
     animation: none;
     width: auto;
+    max-width: none;
+    margin: 0;
+    flex-wrap: wrap;
+    white-space: normal;
+    will-change: auto;
   }
 }
 
