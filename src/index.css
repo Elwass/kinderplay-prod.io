@@ -1194,14 +1194,14 @@ html {
 }
 
 .learning-env__decor--left {
-  left: 80px;
-  bottom: 120px;
+  left: 120px;
+  bottom: 160px;
   width: 120px;
 }
 
 .learning-env__decor--right {
-  right: 120px;
-  top: 140px;
+  right: 160px;
+  top: 180px;
   width: 120px;
 }
 
@@ -1237,11 +1237,13 @@ html {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
+  row-gap: 26px;
   margin: 0 auto 28px;
   max-width: var(--container-max);
   width: auto;
   position: static;
   overflow: visible;
+  padding-block: 8px;
 }
 
 .learning-env__grid--mobile {
