@@ -445,7 +445,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 41px;
   }
 
   .hero-register-button {
