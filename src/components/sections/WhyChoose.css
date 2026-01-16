@@ -7,7 +7,7 @@
 }
 
 .why-choose.section-padding {
-  padding-block: 56px;
+  padding-block: 0px;
 }
 
 .why-split {
@@ -19,6 +19,7 @@
 .why-left {
   position: relative;
   z-index: 2;
+   padding-block: 56px;
 }
 
 .why-right {

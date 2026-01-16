@@ -424,6 +424,7 @@ html {
     height: auto;
     min-height: 32px;
     overflow: visible;
+     transform: translateY(-25px); /* naikin, adjust */
   }
 
   .hero-topbar {
