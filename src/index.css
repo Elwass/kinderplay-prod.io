@@ -935,7 +935,7 @@ html {
   }
 
   .weekend-image {
-    height: 320px;
+    height: clamp(220px, 26vw, 320px);
   }
 }
 
@@ -1136,7 +1136,7 @@ html {
   }
 
   .trial-image {
-    height: 300px;
+    height: clamp(220px, 26vw, 320px);
   }
 
 }
