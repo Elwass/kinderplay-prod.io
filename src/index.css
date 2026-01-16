@@ -1325,10 +1325,6 @@ html {
 }
 
 @media (max-width: 1024px) {
-  .learning-env__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .learning-env__card img {
     height: 160px;
   }
