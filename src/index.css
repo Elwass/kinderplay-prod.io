@@ -1498,33 +1498,37 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 44px;
+    margin: 0;
+    padding: 0;
   }
 
-  .program-item .program-title-line1 {
-    display: block;
-    font-size: 40px;
-    font-weight: 600;
-    line-height: 44px;
-    letter-spacing: 0px;
-  }
-
-  .program-item .program-title-row2 {
-    margin-top: 8px;
-    display: flex;
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: center;
-    gap: 8px;
-  }
-
-  .program-item .program-title-line2 {
+  .program-item .program-line1 {
     display: block;
     margin: 0;
     padding: 0;
     font-size: 40px;
     font-weight: 600;
     line-height: 44px;
+    letter-spacing: 0px;
+  }
+
+  .program-item .program-line2 {
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 10px;
+  }
+
+  .program-item .program-word {
+    display: block;
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 1;
     letter-spacing: 0px;
   }
 
@@ -1532,12 +1536,12 @@ html {
     margin: 0;
     padding: 0;
     position: relative;
-    top: -2px;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 22px;
+    top: -4px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
     letter-spacing: 0px;
-    opacity: 0.6;
+    opacity: 0.65;
     white-space: nowrap;
   }
 }
