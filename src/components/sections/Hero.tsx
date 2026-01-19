@@ -2,8 +2,10 @@ import heroBg from "../../assets/Hero Section.png";
 import logo from "../../assets/kinderra-logo.png";
 
 const whatsappLink = "https://wa.me/6288901910210";
+const titleClass =
+  "text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1] text-[#6F5F52] antialiased tracking-[-0.01em]";
 const subLabelClass =
-  "mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]/80";
+  "mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]/80 antialiased tracking-[-0.01em]";
 
 const Hero = () => {
   return (
@@ -172,24 +174,28 @@ const Hero = () => {
           </div>
 
           <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
-            <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+            <div className={`hero-info-item hero-info-item--age text-center ${titleClass}`}>
               1-5 y.o
               <div className={subLabelClass}>Age</div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
-            <div className="hero-info-item hero-info-item--language text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+            <div className={`hero-info-item hero-info-item--language text-center ${titleClass}`}>
               Bilingual
               <div className={subLabelClass}>Language</div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
-            <div className="hero-info-item hero-info-item--program program-item text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
+            <div
+              className={`hero-info-item hero-info-item--program program-item text-center ${titleClass}`}
+            >
               <span className="program-title flex flex-col items-center gap-[2px]">
-                <span className="program-title-line1 program-line1 block">
+                <span className={`program-title-line1 program-line1 block ${titleClass}`}>
                   Full &amp; Half Day
                 </span>
-                <span className="program-title-row2 program-line2 flex items-center justify-center gap-[6px]">
-                  <span className="program-title-line2 program-word block">Programs</span>
-                  <span className={`${subLabelClass} program-label`}>Program</span>
+                <span className="program-title-row2 program-line2 flex items-baseline justify-center gap-[6px]">
+                  <span className={`program-title-line2 program-word block ${titleClass}`}>
+                    Programs
+                  </span>
+                  <span className={`${subLabelClass} mt-0 program-label`}>Program</span>
                 </span>
               </span>
             </div>
