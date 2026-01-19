@@ -20,10 +20,10 @@ const DaycareProgram = () => {
       />
       <div className="section-container relative flex w-full flex-col gap-10 lg:gap-12">
         <div className="flex min-h-[clamp(140px,16vw,180px)] flex-col items-center justify-center text-center text-[#6F5F52]">
-          <p className="text-[clamp(32px,3.9vw,52px)] font-semibold leading-[1.2] text-[#6F5F52]">
+          <p className="-mt-[12px] text-[clamp(32px,3.9vw,52px)] font-semibold leading-[1.2] text-[#6F5F52]">
             Our Programs
           </p>
-          <h2 className="mt-[6px] text-[clamp(26px,2.6vw,36px)] font-semibold leading-[1.25]">
+          <h2 className="mt-[6px] text-[clamp(32px,3.9vw,52px)] font-semibold leading-[1.2] text-[#6F5F52]">
             <span className="text-[#D98956]">Daycare</span> Program (Ages 1–5)
           </h2>
         </div>

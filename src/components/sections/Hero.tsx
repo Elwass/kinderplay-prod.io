@@ -163,17 +163,17 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
+          <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] lg:gap-[clamp(40px,6vw,120px)] text-[#6F5F52] lg:flex-row">
             <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               1-5 y.o
-              <div className={subLabelClass}>Age</div>
+              <div className={`${subLabelClass} relative right-[36px]`}>Age</div>
             </div>
 
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
 
             <div className="hero-info-item hero-info-item--language text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               Bilingual
-              <div className={subLabelClass}>Language</div>
+              <div className={`${subLabelClass} relative right-[30px]`}>Language</div>
             </div>
 
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
