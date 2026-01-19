@@ -2,8 +2,9 @@ import heroBg from "../../assets/Hero Section.png";
 import logo from "../../assets/kinderra-logo.png";
 
 const whatsappLink = "https://wa.me/6288901910210";
+
 const subLabelClass =
-  "mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]/80 antialiased tracking-[-0.01em]";
+  "mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]/80";
 
 const Hero = () => {
   return (
@@ -163,7 +164,7 @@ const Hero = () => {
           </div>
 
           <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
-            <div className={`hero-info-item hero-info-item--age text-center ${titleClass}`}>
+            <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               1-5 y.o
               <div className={subLabelClass}>Age</div>
             </div>
@@ -180,19 +181,19 @@ const Hero = () => {
             {/* ✅ PROGRAM (posisi kamu tetap, STYLE disamakan) */}
             <div className="hero-info-item hero-info-item--program program-item relative top-[12px] text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               <span className="program-title flex flex-col items-center gap-[2px]">
-                <span className={`program-title-line1 program-line1 block ${titleClass}`}>
+                <span className="program-title-line1 program-line1 block">
                   Full &amp; Half Day
                 </span>
 
                 <span className="program-title-row2 program-line2 flex items-center justify-center gap-[6px]">
                   {/* Programs: dipaksa sama seperti Bilingual */}
-                  <span className="program-title-line2 program-word relative -top-[10px] -left-[17px] text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1] text-[#6F5F52]">
+                  <span className="program-title-line2 program-word relative -top-[10px] -left-[7px] text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1] text-[#6F5F52]">
                     Programs
                   </span>
 
                   {/* Program: dipaksa sama seperti Language */}
                   <span
-                    className={`${subLabelClass} program-label mt-0 relative -top-[14px] -left-[4px] whitespace-nowrap`}
+                    className={`${subLabelClass} program-label mt-0 relative -top-[9px] -left-[px] whitespace-nowrap`}
                   >
                     Program
                   </span>
