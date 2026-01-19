@@ -59,62 +59,72 @@ const CTAPlusFooter = () => {
         </div>
       </div>
       <footer className="cta-footer__footer">
-        <div className="cta-footer__footer-inner section-container">
-          <div className="cta-footer__column">
-            <h3>Kinderra Play</h3>
-            <p>
-              Early Learning Centre based on a
-              <br />
-              warm, calm and comfortable
-              <br />
-              atmosphere.
-            </p>
-          </div>
-          <div className="cta-footer__column">
-            <h3>Contact</h3>
-            <a className="cta-footer__item" href={whatsappLink}>
-              <span className="cta-footer__icon" aria-hidden="true">
-                <img src={phoneIcon} alt="" />
-              </span>
-              (+62) 819-0710-0210
-            </a>
-            <a className="cta-footer__item" href={emailLink}>
-              <span className="cta-footer__icon" aria-hidden="true">
-                <img src={emailIcon} alt="" />
-              </span>
-              kinderra.play@gmail.com
-            </a>
-            <a
-              className="cta-footer__item cta-footer__item--ig"
-              href={instagramLink}
-            >
-              <span className="cta-footer__icon" aria-hidden="true">
-                <img src={instagramIcon} alt="" />
-              </span>
-              @kinderraplay
-            </a>
-          </div>
-          <div className="cta-footer__column cta-footer__column--follow">
-            <h3>Follow Us</h3>
-            <div className="cta-footer__socials">
-              <a
-                className="cta-footer__social-icon"
-                href={whatsappLink}
-                aria-label="Facebook"
-              >
-                <img src={facebookIcon} alt="" />
-              </a>
-              <a
-                className="cta-footer__social-icon"
-                href={instagramLink}
-                aria-label="Instagram"
-              >
-                <img src={instagramIcon} alt="" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+  <div className="cta-footer__footer-inner section-container">
+    <div className="cta-footer__column">
+      <h3>Kinderra Play</h3>
+      <p>
+        Early Learning Centre based on a
+        <br />
+        warm, calm and comfortable
+        <br />
+        atmosphere.
+      </p>
+    </div>
+
+    <div className="cta-footer__column">
+      <h3>Contact</h3>
+      <a className="cta-footer__item" href={whatsappLink}>
+        <span className="cta-footer__icon" aria-hidden="true">
+          <img src={phoneIcon} alt="" />
+        </span>
+        (+62) 819-0710-0210
+      </a>
+      <a className="cta-footer__item" href={emailLink}>
+        <span className="cta-footer__icon" aria-hidden="true">
+          <img src={emailIcon} alt="" />
+        </span>
+        kinderra.play@gmail.com
+      </a>
+      <a className="cta-footer__item cta-footer__item--ig" href={instagramLink}>
+        <span className="cta-footer__icon" aria-hidden="true">
+          <img src={instagramIcon} alt="" />
+        </span>
+        @kinderraplay
+      </a>
+    </div>
+
+    <div className="cta-footer__column cta-footer__column--follow">
+      <h3>Follow Us</h3>
+      <div className="cta-footer__socials">
+        <a
+          className="cta-footer__social-icon"
+          href={whatsappLink}
+          aria-label="Facebook"
+        >
+          <img src={facebookIcon} alt="" />
+        </a>
+        <a
+          className="cta-footer__social-icon"
+          href={instagramLink}
+          aria-label="Instagram"
+        >
+          <img src={instagramIcon} alt="" />
+        </a>
+      </div>
+    </div>
+
+    {/* ✅ NEW LOCATION COLUMN */}
+    <div className="cta-footer__column cta-footer__column--location">
+      <h3>Location :</h3>
+      <p>
+        Ruko Asya Genova No. 30
+        <br />
+        Jl. Asya Boulevard, Jl. Jakarta Garden City Boulevard, Cakung Timur, Cakung,
+        Jakarta Timur, DKI Jakarta 13910.
+      </p>
+    </div>
+  </div>
+</footer>
     </section>
   );
 };

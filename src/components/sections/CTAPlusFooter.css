@@ -107,16 +107,20 @@
 
 .cta-footer__footer-inner {
   display: grid;
-  grid-template-columns: 1.2fr 1fr auto;
-  gap: 20px;
+  grid-template-columns: 1.1fr 0.9fr 0.6fr 1.4fr; /* 4 kolom */
+  gap: 24px;
   color: #ffffff;
   align-items: start;
+
+  /* biar semua start dari kiri */
+  justify-items: start;
 }
 
 .cta-footer__column {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
+  max-width: 320px;
+  justify-self: start;   /* ✅ semua kolom start/kiri */
+  text-align: left;      /* ✅ text kiri */
+  gap: 10px;
 }
 
 .cta-footer__column h3 {
@@ -131,38 +135,37 @@
   font-size: 12px;
   line-height: 1.45;
   color: rgba(255, 255, 255, 0.8);
-  white-space: nowrap;
+
+  /* supaya location bisa panjang tanpa maksa 1 baris */
+  white-space: normal;
 }
 
+/* Follow Us jangan kanan */
 .cta-footer__column--follow {
-  justify-self: end;
-  text-align: right;
+  justify-self: start;
+  text-align: left;
 }
 
-.cta-footer__item {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  white-space: nowrap;
-}
-
-.cta-footer__item--ig {
-  display: none;
-}
-
-.cta-footer__icon {
-  display: inline-flex;
-  width: 16px;
-  justify-content: center;
-}
-
+/* Ikon follow juga kiri */
 .cta-footer__socials {
   display: flex;
   gap: 10px;
   font-size: 12px;
   color: #ffffff;
-  justify-content: flex-end;
+  justify-content: flex-start; /* ✅ kiri */
   align-items: center;
+}
+
+
+.cta-footer__item {
+  font-size: 12px;       /* sama kayak p */
+  line-height: 1.45;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+   display: flex;
+    gap: 10px;          /* ✅ jarak icon ke text */
+  margin-top: 6px;    /* ✅ jarak antar item */
 }
 
 .cta-footer__social-icon {

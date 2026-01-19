@@ -43,7 +43,10 @@ export default function LearningEnvironment() {
           expression to physical confidence and quiet focus.
         </p>
 
-        <div className="learning-env__grid learning-env__grid--desktop" data-reveal-stagger>
+       <div
+  className="learning-env__grid learning-env__grid--desktop grid grid-cols-4 gap-x-[20px] gap-y-[26px]"
+  data-reveal-stagger
+>
           {gridImages.map((src, index) => (
             <div className="learning-env__card" key={src}>
               <img src={src} alt={`Learning environment ${index + 1}`} />

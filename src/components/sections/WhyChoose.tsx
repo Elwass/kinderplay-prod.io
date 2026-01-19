@@ -1,4 +1,4 @@
-import educationalBg from "../../assets/educational.png";
+import educationalBg from "../../assets/ChatGPT Image Jan 19, 2026, 06_06_16 PM.png";
 import "./WhyChoose.css";
 
 export default function WhyChoose() {

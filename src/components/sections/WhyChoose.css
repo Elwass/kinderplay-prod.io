@@ -24,14 +24,47 @@
 
 .why-right {
   position: relative;
+  z-index: 0;
   background-image: var(--whychoose-bg);
   background-size: cover;
-  background-position: center;
+  background-position: 20% center; /* jangan 100%, terlalu mepet */
   background-repeat: no-repeat;
-  opacity: 1;
   min-height: 100%;
   height: 100%;
 }
+
+
+
+.why-split {
+  position: relative; /* penting biar ::before nempel */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+}
+
+/* overlay biru nyebrang ke kiri (Figma feel) */
+.why-split::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1; /* di atas bg, di bawah text */
+
+  background: linear-gradient(
+    90deg,
+    rgba(186, 214, 232, 0.92) 20%,
+    rgba(186, 214, 232, 0.78) 60%,
+    rgba(186, 214, 232, 0.35) 90%,
+    rgba(212, 228, 238, 0) 100%
+  );
+}
+
+/* pastiin konten kiri di atas overlay */
+.why-left {
+  position: relative;
+  z-index: 2;
+}
+
 
 .why-inner {
   max-width: 720px;

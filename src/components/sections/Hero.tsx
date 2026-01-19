@@ -163,7 +163,38 @@ const Hero = () => {
             </a>
           </div>
 
-          <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] lg:gap-[clamp(40px,6vw,120px)] text-[#6F5F52] lg:flex-row">
+          {/* ✅ MOBILE HERO INFO (NEW) */}
+          <div className="mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex w-full items-start justify-center gap-6 text-[#6F5F52] lg:hidden">
+            <div className="flex flex-col items-center text-center">
+              <div className="text-[12px] font-semibold leading-[1.1]">
+                Full &amp; Half Day
+              </div>
+              <div className="mt-[4px] text-[10px] leading-[1.1] text-[#6F5F52]/80">
+                Program
+              </div>
+            </div>
+
+            <div className="h-[24px] w-[1px] bg-[#6F5F52]/60" />
+
+            <div className="flex flex-col items-center text-center">
+              <div className="text-[12px] font-semibold leading-[1.1]">1-5 y.o</div>
+              <div className="mt-[4px] text-[10px] leading-[1.1] text-[#6F5F52]/80">
+                Age
+              </div>
+            </div>
+
+            <div className="h-[24px] w-[1px] bg-[#6F5F52]/60" />
+
+            <div className="flex flex-col items-center text-center">
+              <div className="text-[12px] font-semibold leading-[1.1]">Bilingual</div>
+              <div className="mt-[4px] text-[10px] leading-[1.1] text-[#6F5F52]/80">
+                Language
+              </div>
+            </div>
+          </div>
+
+          {/* ✅ DESKTOP HERO INFO (ORIGINAL - TIDAK DIUBAH) */}
+          <div className="hero-info hidden lg:flex mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] w-full items-center justify-center gap-[clamp(40px,6vw,120px)] text-[#6F5F52]">
             <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               1-5 y.o
               <div className={`${subLabelClass} relative right-[36px]`}>Age</div>
@@ -178,7 +209,6 @@ const Hero = () => {
 
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
 
-            {/* ✅ PROGRAM (posisi kamu tetap, STYLE disamakan) */}
             <div className="hero-info-item hero-info-item--program program-item relative top-[12px] text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               <span className="program-title flex flex-col items-center gap-[2px]">
                 <span className="program-title-line1 program-line1 block">
@@ -186,14 +216,12 @@ const Hero = () => {
                 </span>
 
                 <span className="program-title-row2 program-line2 flex items-center justify-center gap-[6px]">
-                  {/* Programs: dipaksa sama seperti Bilingual */}
                   <span className="program-title-line2 program-word relative -top-[10px] -left-[7px] text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1] text-[#6F5F52]">
                     Programs
                   </span>
 
-                  {/* Program: dipaksa sama seperti Language */}
                   <span
-                    className={`${subLabelClass} program-label mt-0 relative -top-[9px] -left-[px] whitespace-nowrap`}
+                    className={`${subLabelClass} program-label mt-0 relative -top-[9px] whitespace-nowrap`}
                   >
                     Program
                   </span>

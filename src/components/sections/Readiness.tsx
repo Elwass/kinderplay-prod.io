@@ -8,12 +8,12 @@ const Readiness = () => {
       <div className="section-container relative z-10 flex w-full flex-col gap-10 lg:gap-12">
         <div className="text-center text-[#6F5F52]">
           <h2 className="text-[clamp(34px,3.2vw,48px)] font-semibold leading-[1.2]">
-            Apa yang dimaksud dengan{" "}
-            <span className="text-[#D98956]">Readiness</span> di sini?
+            What is meant by{" "}
+            <span className="text-[#D98956]">Readiness</span> here?
           </h2>
           <p className="mx-auto mt-[14px] max-w-[640px] text-[clamp(14px,1.1vw,18px)] leading-[1.5]">
-            Readiness di Kinderra adalah kesiapan anak untuk belajar &amp; hidup,
-            bukan sekedar bisa membaca atau menulis lebih cepat.
+            Readiness at Kinderra is a child’s readiness to learn and navigate life,
+            not merely the ability to read or write early.
           </p>
         </div>
 
@@ -32,14 +32,14 @@ const Readiness = () => {
                 <img
                   src={new URL("../../assets/IconRead1.png", import.meta.url).href}
                   alt="Emotional icon"
-                  className="h-6 w-6 object-contain"
+                  className="h-10 w-10 object-contain"   // 40px
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Emotional</h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>Anak merasa aman dan percaya diri</li>
-                <li>Mampu mengenali dan mengekspresikan emosi</li>
-                <li>Tidak mudah overwhelmed</li>
+                <li>The child feels safe and confident</li>
+                <li>Able to recognize and express emotions</li>
+                <li>Not easily overwhelmed</li>
               </ul>
             </div>
 
@@ -48,14 +48,14 @@ const Readiness = () => {
                 <img
                   src={new URL("../../assets/IconRead2.png", import.meta.url).href}
                   alt="Life skill icon"
-                  className="h-6 w-6 object-contain"
+                  className="h-10 w-10 object-contain"   // 40px
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Life Skill</h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>Mengikuti rutinitas harian</li>
-                <li>Makan, merapikan, mandiri</li>
-                <li>Main/beraktivitas sendiri (sesuai usia)</li>
+                <li>Follows daily routines</li>
+                <li>Eats independently, tidies up toys, and chooses activities independently</li>
+                <li>(Age-appropriate)</li>
               </ul>
             </div>
 
@@ -64,16 +64,16 @@ const Readiness = () => {
                 <img
                   src={new URL("../../assets/IconRead3.png", import.meta.url).href}
                   alt="Social and communication icon"
-                  className="h-6 w-6 object-contain"
+                  className="h-10 w-10 object-contain"   // 40px
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">
                 Social &amp; Communication
               </h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>Berinteraksi dengan teman dan guru</li>
-                <li>Mendengarkan, bergiliran, menyampaikan kebutuhan</li>
-                <li>Penggunaan bilingual (EN-ID)</li>
+                <li>Interacts with peers and teachers</li>
+                <li>Listens and takes turns to express needs</li>
+                <li>Bilingual exposure (English–Indonesian)</li>
               </ul>
             </div>
 
@@ -82,14 +82,14 @@ const Readiness = () => {
                 <img
                   src={new URL("../../assets/IconRead4.png", import.meta.url).href}
                   alt="Cognitive icon"
-                  className="h-6 w-6 object-contain"
+                  className="h-10 w-10 object-contain"   // 40px
                 />
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Cognitive</h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>Rasa ingin tahu dan berpikir kritis</li>
-                <li>Memecahkan masalah sederhana</li>
-                <li>Eksplorasi dan kreativitas</li>
+                <li>Curiosity and critical thinking</li>
+                <li>Solves simple problems</li>
+                <li>Exploration and creativity</li>
               </ul>
             </div>
           </div>
