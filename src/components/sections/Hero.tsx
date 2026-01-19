@@ -185,11 +185,13 @@ const Hero = () => {
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
             <div className="hero-info-item hero-info-item--program program-item text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
-              <span className="program-title">
+              <span className="program-title flex flex-col items-center">
                 <span className="program-line1">Full &amp; Half Day</span>
-                <span className="program-line2">
+                <span className="program-line2 mt-[clamp(2px,0.4vw,6px)] flex items-baseline justify-center gap-[clamp(6px,1vw,12px)]">
                   <span className="program-word">Programs</span>
-                  <span className="program-label">Program</span>
+                  <span className="program-label text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]">
+                    Program
+                  </span>
                 </span>
               </span>
             </div>
