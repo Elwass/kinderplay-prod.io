@@ -622,12 +622,8 @@ html {
     display: flex;
     flex-wrap: nowrap;
     gap: 12px;
-<<<<<<< HEAD
     width: max-content;
     animation: learningEnvMarquee 24s linear infinite;
-=======
-    animation: learningEnvMarquee 5s linear infinite;
->>>>>>> 754b24b (fix button5)
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     will-change: transform;
@@ -1343,40 +1339,6 @@ html {
   line-height: 1;
 }
 
-<<<<<<< HEAD
-=======
-@media (min-width: 769px) {
-  .learning-env__grid {
-    display: block;
-    width: 100vw;
-    margin-inline: calc(50% - 50vw);
-    margin-bottom: 28px;
-    overflow: hidden;
-    padding: 0;
-    background: transparent;
-  }
-
-  .learning-env__track {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 20px;
-    animation: learningEnvMarquee 10s linear infinite;
-    animation-timing-function: linear;
-    will-change: transform;
-    background: transparent;
-  }
-
-  .learning-env__card {
-    flex: 0 0 260px;
-    max-width: 260px;
-  }
-
-  .learning-env__grid::after {
-    display: none;
-  }
-}
-
->>>>>>> 754b24b (fix button5)
 @media (max-width: 1024px) {
   .learning-env__card img {
     height: 190px;
