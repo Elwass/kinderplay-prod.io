@@ -1498,30 +1498,39 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    line-height: 1.1;
+    line-height: 44px;
   }
 
   .program-item .program-title-line1 {
     display: block;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0px;
   }
 
   .program-item .program-title-row2 {
-    margin-top: 6px;
+    margin-top: 8px;
     display: inline-flex;
     align-items: baseline;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
   }
 
   .program-item .program-title-line2 {
     display: block;
-    line-height: 1.1;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0px;
   }
 
   .program-item .program-label {
-    font-size: 0.55em;
+    font-size: 18px;
     font-weight: 500;
-    line-height: 1.1;
+    line-height: 22px;
+    letter-spacing: 0px;
     opacity: 0.6;
+    white-space: nowrap;
   }
 }

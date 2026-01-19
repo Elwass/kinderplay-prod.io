@@ -187,7 +187,7 @@ const Hero = () => {
             <div className="hero-info-item hero-info-item--program program-item text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               <span className="program-title">
                 <span className="program-title-line1 block">Full &amp; Half Day</span>
-                <span className="program-title-row2 mt-[clamp(6px,1vw,8px)] flex flex-col items-center gap-[2px]">
+                <span className="program-title-row2 mt-[clamp(6px,1vw,8px)] flex items-baseline justify-center">
                   <span className="program-title-line2 block">Programs</span>
                   <span className="program-label text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
                     Program
