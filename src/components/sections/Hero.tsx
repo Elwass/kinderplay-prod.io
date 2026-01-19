@@ -2,6 +2,8 @@ import heroBg from "../../assets/Hero Section.png";
 import logo from "../../assets/kinderra-logo.png";
 
 const whatsappLink = "https://wa.me/6288901910210";
+const subLabelClass =
+  "mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2] text-[#6F5F52]/80";
 
 const Hero = () => {
   return (
@@ -172,26 +174,20 @@ const Hero = () => {
           <div className="hero-info mb-[clamp(24px,4vw,64px)] mt-[clamp(16px,3vw,48px)] flex flex-col items-center justify-center gap-[clamp(16px,3vw,44px)] text-[#6F5F52] lg:flex-row">
             <div className="hero-info-item hero-info-item--age text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               1-5 y.o
-              <div className="mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
-                Age
-              </div>
+              <div className={subLabelClass}>Age</div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
             <div className="hero-info-item hero-info-item--language text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
               Bilingual
-              <div className="mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
-                Language
-              </div>
+              <div className={subLabelClass}>Language</div>
             </div>
             <div className="hidden h-[clamp(40px,4.5vw,53px)] w-[3px] rounded-[31px] bg-[#6F5F52] lg:block" />
             <div className="hero-info-item hero-info-item--program program-item text-center text-[clamp(22px,2.8vw,40px)] font-medium leading-[1.1]">
-              <span className="program-title">
+              <span className="program-title flex flex-col items-center">
                 <span className="program-title-line1 block">Full &amp; Half Day</span>
-                <span className="program-title-row2 mt-[clamp(6px,1vw,8px)] flex flex-col items-center justify-center">
+                <span className="program-title-row2 mt-[clamp(6px,1vw,8px)] flex items-start justify-center gap-[clamp(6px,1vw,8px)]">
                   <span className="program-title-line2 block">Programs</span>
-                  <span className="program-label mt-[clamp(6px,1vw,8px)] text-[clamp(14px,1.6vw,20px)] font-normal leading-[1.2]">
-                    Program
-                  </span>
+                  <span className={subLabelClass}>Program</span>
                 </span>
               </span>
             </div>
