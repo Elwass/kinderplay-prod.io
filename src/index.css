@@ -1511,14 +1511,17 @@ html {
 
   .program-item .program-title-row2 {
     margin-top: 8px;
-    display: inline-flex;
+    display: flex;
+    flex-direction: row;
     align-items: baseline;
     justify-content: center;
-    gap: 12px;
+    gap: 8px;
   }
 
   .program-item .program-title-line2 {
     display: block;
+    margin: 0;
+    padding: 0;
     font-size: 40px;
     font-weight: 600;
     line-height: 44px;
@@ -1526,6 +1529,10 @@ html {
   }
 
   .program-item .program-label {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: -2px;
     font-size: 18px;
     font-weight: 500;
     line-height: 22px;
