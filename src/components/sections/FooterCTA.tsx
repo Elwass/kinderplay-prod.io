@@ -31,7 +31,7 @@ const FooterCTA = () => {
         </div>
         <div className="mt-10 flex flex-wrap items-center justify-between gap-4 text-xs text-white/70">
           <span>Jl. Kinderra No. 8, Jakarta Selatan</span>
-          <span>hello@kinderraplay.com</span>
+          <a href="mailto:hello@kinderraplay.com">hello@kinderraplay.com</a>
           <span>+62 812 1234 5678</span>
         </div>
       </div>

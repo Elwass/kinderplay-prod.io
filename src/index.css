@@ -1246,15 +1246,16 @@ html {
 .learning-env__gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 20px;
-  row-gap: 26px;
+  column-gap: 24px;   /* kanan-kiri */
+  row-gap: 28px;      /* atas-bawah */
   margin: 0 auto 28px;
   max-width: var(--container-max);
   width: auto;
   position: static;
   overflow: visible;
-  padding-block: 8px;
+  padding-block: 12px;
 }
+
 
 .learning-env__grid--mobile {
   display: none;
