@@ -1242,16 +1242,15 @@ html {
 .learning-env__gallery {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  column-gap: 24px;   /* kanan-kiri */
-  row-gap: 28px;      /* atas-bawah */
+  gap: 20px;
+  row-gap: 26px;
   margin: 0 auto 28px;
   max-width: var(--container-max);
   width: auto;
   position: static;
   overflow: visible;
-  padding-block: 12px;
+  padding-block: 8px;
 }
-
 
 .learning-env__grid--mobile {
   display: none;
@@ -1339,6 +1338,40 @@ html {
   line-height: 1;
 }
 
+<<<<<<< HEAD
+=======
+@media (min-width: 769px) {
+  .learning-env__grid {
+    display: block;
+    width: 100vw;
+    margin-inline: calc(50% - 50vw);
+    margin-bottom: 28px;
+    overflow: hidden;
+    padding: 0;
+    background: transparent;
+  }
+
+  .learning-env__track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    animation: learningEnvMarquee 10s linear infinite;
+    animation-timing-function: linear;
+    will-change: transform;
+    background: transparent;
+  }
+
+  .learning-env__card {
+    flex: 0 0 260px;
+    max-width: 260px;
+  }
+
+  .learning-env__grid::after {
+    display: none;
+  }
+}
+
+>>>>>>> 754b24b (fix button5)
 @media (max-width: 1024px) {
   .learning-env__card img {
     height: 190px;
