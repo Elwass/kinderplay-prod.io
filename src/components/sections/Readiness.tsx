@@ -11,9 +11,8 @@ const Readiness = () => {
             What do we mean by{" "}
             <span className="text-[#D98956]">"Readiness"</span>?
           </h2>
-          <p className="mx-auto mt-[14px] max-w-[640px] text-[clamp(14px,1.1vw,18px)] leading-[1.5]">
-            Readiness at Kinderra is a child’s readiness to learn and navigate life,
-            not merely the ability to read or write early.
+          <p className="mx-auto mt-[14px] max-w-[700px] text-[clamp(14px,1.1vw,18px)] leading-[1.5]">
+           At Kinderra readiness means a child has the skills to navigate both school and life.
           </p>
         </div>
 
