@@ -63,7 +63,7 @@ const LearningFramework = () => {
             <ul className="mt-[18px] list-disc space-y-[14px] pl-[18px] text-[16px] leading-[30px]">
               <li>
                 <span className="font-semibold">Independence</span> – managing routines,
-                self-care, and dailychoices
+                self-care, and daily choices
               </li>
               <li>
                 <span className="font-semibold">Confidence</span> – expressing ideas,
@@ -71,12 +71,11 @@ const LearningFramework = () => {
               </li>
               <li>
                 <span className="font-semibold">Communication</span> – bilingual language
-                development in Englishand Bahasa Indonesia
+                development in English and Bahasa Indonesia
               </li>
             </ul>
             <p className="mt-[24px] text-[16px] leading-[30px]">
-              Each activity is guided by trained educators with clear goals, milestones ,
-              and outcomes.
+              Each activity is guided by trained educators with clear goals, milestones and learning outcomes.
             </p>
           </div>
         </div>

@@ -132,7 +132,7 @@ const Hero = () => {
           <div className="hero-description mt-[clamp(18px,3.5vw,44px)] flex w-full max-w-[900px] flex-col items-center gap-[clamp(10px,2.2vw,20px)] text-center text-[clamp(14px,1.6vw,20px)] leading-[1.5] text-[#6F5F52]">
             <p>
               <span className="font-semibold">
-                Kinderra Play, a premium early learning center
+                Kinderra Play is a premium early learning center
               </span>{" "}
               supporting the development of{" "}
               <span className="font-semibold">confident</span>,{" "}
@@ -158,7 +158,7 @@ const Hero = () => {
               <span>Trial Class</span>
             </a>
             <a href={whatsappLink} className="hero-cta hero-cta--secondary">
-              <span>Get Enrollment</span>
+              <span>Enrollment</span>
               <span>Information</span>
             </a>
           </div>

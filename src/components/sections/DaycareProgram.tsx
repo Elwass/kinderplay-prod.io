@@ -104,15 +104,9 @@ const DaycareProgram = () => {
             <ul className="mt-[12px] list-disc space-y-[12px] pl-[18px] text-[16px] leading-[28px] lg:mt-[12px] lg:space-y-[10px] lg:pl-[18px] lg:text-[20px] lg:leading-[20px] lg:tracking-[0em] lg:text-[#000000]">
               <li>Guided play with clear learning intentions</li>
               <li>Calm, predictable daily routines that build security</li>
-              <li>
-                <span className="font-semibold">Development</span> of independence,
-                communication, and social skills
-              </li>
+              <li>Age-appropriate early literacy and numeracy foundations.</li>
+              <li>Development of independence, communication, and social skills</li> 
             </ul>
-
-            <p className="mt-[18px] text-[16px] leading-[28px] lg:mt-[20px] lg:text-[20px] lg:leading-[20px] lg:tracking-[0em] lg:text-[#000000]">
-              Age-appropriate early literacy and numeracy foundations.
-            </p>
           </div>
         </div>
       </div>

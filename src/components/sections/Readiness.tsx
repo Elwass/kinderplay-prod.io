@@ -8,8 +8,8 @@ const Readiness = () => {
       <div className="section-container relative z-10 flex w-full flex-col gap-10 lg:gap-12">
         <div className="text-center text-[#6F5F52]">
           <h2 className="text-[clamp(34px,3.2vw,48px)] font-semibold leading-[1.2]">
-            What is meant by{" "}
-            <span className="text-[#D98956]">Readiness</span> here?
+            What do we mean by{" "}
+            <span className="text-[#D98956]">"Readiness"</span>?
           </h2>
           <p className="mx-auto mt-[14px] max-w-[640px] text-[clamp(14px,1.1vw,18px)] leading-[1.5]">
             Readiness at Kinderra is a child’s readiness to learn and navigate life,
@@ -37,9 +37,9 @@ const Readiness = () => {
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Emotional</h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>The child feels safe and confident</li>
-                <li>Able to recognize and express emotions</li>
-                <li>Not easily overwhelmed</li>
+                <li>The Kinderra child feels safe and confident</li>
+                <li>Can recognize and express their emotions</li>
+                <li>Is not easily overwhelmed</li>
               </ul>
             </div>
 
@@ -55,7 +55,6 @@ const Readiness = () => {
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Follows daily routines</li>
                 <li>Eats independently, tidies up toys, and chooses activities independently</li>
-                <li>(Age-appropriate)</li>
               </ul>
             </div>
 
@@ -72,8 +71,8 @@ const Readiness = () => {
               </h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
                 <li>Interacts with peers and teachers</li>
-                <li>Listens and takes turns to express needs</li>
-                <li>Bilingual exposure (English–Indonesian)</li>
+                <li>Listens and takes turns to express their needs</li>
+                <li>Able to communicate in both English and Indonesian</li>
               </ul>
             </div>
 
@@ -87,9 +86,9 @@ const Readiness = () => {
               </div>
               <h3 className="text-[18px] font-semibold leading-[24px]">Cognitive</h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
-                <li>Curiosity and critical thinking</li>
+                <li>Curious with critical thinking skills</li>
                 <li>Solves simple problems</li>
-                <li>Exploration and creativity</li>
+                <li>Loves learning, exploration and creativity</li>
               </ul>
             </div>
           </div>
