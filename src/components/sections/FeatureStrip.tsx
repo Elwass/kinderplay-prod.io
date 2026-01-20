@@ -33,7 +33,7 @@ const features = [
     ),
   },
   {
-    title: "Premium Experience – Smart\nPricing",
+    title: "Premium Experience – Smart Pricing",
     icon: (
       <img
         src={new URL("../../assets/badge 4.png", import.meta.url).href}
