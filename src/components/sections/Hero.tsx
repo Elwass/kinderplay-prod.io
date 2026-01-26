@@ -71,7 +71,7 @@ const Hero = () => {
 
                 <a className="hero-pill__text" href={whatsappLink}>
                   JOIN OUR TRIAL CLASS &amp; STORY BOOK PLAYDATE{" "}
-                  <span className="font-semibold">ON FEBRUARY 17!</span>
+                  <span className="font-semibold">ON FEBRUARY 7!</span>
                 </a>
               </div>
             </div>
