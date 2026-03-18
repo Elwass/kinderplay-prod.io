@@ -65,7 +65,7 @@ const Readiness = () => {
                   className="h-10 w-10 object-contain"   // 40px
                 />
               </div>
-              <h3 className="text-[18px] font-semibold leading-[24px]">
+              <h3 className="text-[15px] font-semibold leading-[24px]">
                 Social &amp; Communication
               </h3>
               <ul className="readiness-list list-disc space-y-2 pl-5 text-[14px] leading-[22px]">
